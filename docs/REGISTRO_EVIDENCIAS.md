@@ -2,7 +2,10 @@
 
 | ID | Etapa | Requisito | Evidência | Data | Responsável | Resultado |
 |---|---:|---|---|---|---|---|
-| E-000 | 0 | Repositório exclusivo | Aguardando URL pública | — | — | Pendente |
+| E-001 | 0 | Repositório exclusivo e público | [CardioIA-Fase3-Monitoramento-IoT](https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT) | 23/10/2026 | Fabrício | Aprovado |
+| E-002 | 0 | Visibilidade pública | `evidencias/etapa-0/E0-01-repositorio-publico.jpg` | 23/10/2026 | Fabrício | Aprovado |
+| E-003 | 0 | Acesso externo à branch principal | `git ls-remote` retornou `HEAD` e `refs/heads/main` no commit `51f950c` | 23/10/2026 | Codex | Aprovado |
+| E-004 | 0 | Documentação na branch `main` | README, `.gitignore` e cinco documentos de governança lidos diretamente do GitHub | 23/10/2026 | Codex | Aprovado |
 
 ## Padrão de nomes
 

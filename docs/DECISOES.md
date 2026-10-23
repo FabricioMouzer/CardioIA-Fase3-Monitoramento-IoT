@@ -5,7 +5,7 @@
 - **Decisão:** usar `CardioIA-Fase3-Monitoramento-IoT`.
 - **Visibilidade:** pública.
 - **Motivo:** separar a Fase 3 dos trabalhos anteriores e permitir acesso do grupo e do avaliador.
-- **Estado:** aguardando criação no GitHub.
+- **Estado:** concluída em 23/10/2026; repositório criado e validado como público.
 
 ## D-002 — Desenvolvimento por portões
 
