@@ -1,0 +1,22 @@
+CardioIA — Fase 3
+Etapa 1 — aprovação coletiva
+Data registrada: 23/10/2026
+
+Declaração recebida de Fabrício Mouzer Brito:
+"Os 4 integrantes do grupo aprovaram as decisões da etapa 1."
+
+Integrantes abrangidos:
+- Fabrício Mouzer Brito — RM566777
+- Enzo Nunes Castanheira Gloria da Silva — RM567599
+- Larissa Nunes Moreira Reis — RM568280
+- Gabriel Rapozo Guimarães Soares — RM568480
+
+Decisões aprovadas:
+1. DHT22 + potenciômetro/BPM.
+2. Amostragem a cada cinco segundos.
+3. Buffer de 2.160 amostras.
+4. Descarte da amostra mais antiga quando a fila lotar.
+5. Limites acadêmicos de BPM e temperatura.
+6. HiveMQ público, dados sintéticos e QoS 0.
+7. FlowFuse Dashboard 2.0.
+8. Itens opcionais somente após o núcleo obrigatório.

@@ -10,7 +10,7 @@
 | E-102 | 1 | Contrato MQTT e JSON | `docs/ETAPA_1_CONTRATO_MQTT.md` e `data/exemplo-telemetria-v1.json` | 23/10/2026 | Codex | Aprovado tecnicamente |
 | E-103 | 1 | Auditoria da PR nº 10 | `docs/ETAPA_1_AUDITORIA_PR10.md` | 23/10/2026 | Codex | Aprovado tecnicamente |
 | E-104 | 1 | Validador executado no commit público `2fa0838` | `evidencias/etapa-1/E1-01-validacao-documental.txt` | 23/10/2026 | Codex | Aprovado |
-| E-105 | 1 | Revisão dos quatro integrantes | `docs/ETAPA_1_REVISAO_GRUPO.md` | — | Equipe | Pendente |
+| E-105 | 1 | Revisão dos quatro integrantes | `docs/ETAPA_1_REVISAO_GRUPO.md` | 23/10/2026 | Equipe | Aprovado |
 
 ## Padrão de nomes
 

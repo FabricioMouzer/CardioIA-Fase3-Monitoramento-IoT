@@ -43,8 +43,10 @@ def main() -> None:
     assert payload["source"] in {"live", "buffered"}
 
     review = read("docs/ETAPA_1_REVISAO_GRUPO.md")
-    assert review.count("Aguardando confirmação") == 4
-    print("Etapa 1: 6 arquivos, 3 tópicos e contrato JSON validados.")
+    assert "Aguardando confirmação" not in review
+    assert review.count("| Aprovado | 23/10/2026 |") == 4
+    assert review.count("- [x]") == 8
+    print("Etapa 1: documentos, 3 tópicos, contrato JSON e revisão do grupo validados.")
 
 
 if __name__ == "__main__":
