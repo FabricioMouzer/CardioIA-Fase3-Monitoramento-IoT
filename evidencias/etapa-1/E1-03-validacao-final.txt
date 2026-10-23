@@ -1,0 +1,24 @@
+CardioIA — Fase 3
+Etapa 1 — validação final
+Data: 23/10/2026
+Commit público testado: 4efa87791dfac9c3b42feecfa0f3c13e6936dfb2
+
+Comando:
+python3 tests/validate_stage1.py
+
+Resultado:
+Etapa 1: documentos, 3 tópicos, contrato JSON e revisão do grupo validados.
+
+Código de saída: 0
+
+Critérios aprovados:
+- matriz completa do enunciado e do barema;
+- arquitetura Edge → MQTT → Fog/Cloud → Dashboard → alerta;
+- escolha justificada do segundo sensor;
+- contrato JSON e três tópicos MQTT consistentes;
+- estratégia de resiliência e limite de armazenamento;
+- estratégia de segurança com dados exclusivamente sintéticos;
+- auditoria da PR nº 10;
+- aprovação registrada dos quatro integrantes.
+
+Pendências críticas da Etapa 1: nenhuma.
