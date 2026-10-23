@@ -2,7 +2,7 @@
 
 Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 do projeto CardioIA.
 
-> Estado atual: **Etapa 0 confirmada e finalizada. Etapa 1 liberada, ainda não iniciada.**
+> Estado atual: **Etapa 0 confirmada e finalizada. Etapa 1 em execução.**
 
 ## Regra principal do projeto
 
@@ -32,7 +32,7 @@ Os e-mails dos integrantes não serão publicados no repositório.
 | Etapa | Objetivo | Estado |
 |---|---|---|
 | 0 | Governança, repositório e critérios | Confirmada e finalizada em 23/10/2026 |
-| 1 | Requisitos e arquitetura | Liberada; aguardando início formal |
+| 1 | Requisitos e arquitetura | Em execução; aguardando validação técnica e revisão do grupo |
 | 2 | Sensores e circuito no Wokwi | Bloqueada |
 | 3 | Resiliência offline no Edge | Bloqueada |
 | 4 | MQTT e broker | Bloqueada |
