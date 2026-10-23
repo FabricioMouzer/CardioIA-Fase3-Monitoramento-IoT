@@ -1,0 +1,26 @@
+CardioIA — Fase 3
+Etapa 1 — validação documental
+Data: 23/10/2026
+Repositório: FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT
+Branch: main
+Commit testado: 2fa083862e52bc51ed55e8160a29f98cdbe0f6f9
+
+Procedimento:
+1. Atualização de clone realizada pela URL pública HTTPS.
+2. Checkout destacado de origin/main.
+3. Execução: python3 tests/validate_stage1.py
+
+Resultado observado:
+Etapa 1: 6 arquivos, 3 tópicos e contrato JSON validados.
+
+Código de saída: 0
+
+Escopo comprovado:
+- arquivos obrigatórios da Etapa 1 presentes;
+- namespace MQTT idêntico nos três tópicos;
+- decisões DHT22, potenciômetro, buffer e FlowFuse documentadas;
+- exemplo JSON válido e com todos os campos da versão 1;
+- revisão dos quatro integrantes mantida como pendente.
+
+Limite da evidência:
+Este teste não executa firmware, Wokwi, MQTT ou Node-RED. Essas comprovações pertencem às etapas posteriores.
