@@ -63,3 +63,15 @@
 - **Decisão:** não iniciar REST/e-mail, Grafana nem IA em séries temporais antes da aprovação integral dos cinco critérios obrigatórios.
 - **Motivo:** proteger a nota principal e impedir que itens opcionais desviem recursos das evidências obrigatórias.
 - **Estado:** aprovada.
+
+## D-011 — Biblioteca do DHT22
+
+- **Decisão:** utilizar `DHT sensor library for ESPx` e o cabeçalho `DHTesp.h`.
+- **Motivo:** é a biblioteca indicada pela documentação do Wokwi para DHT22 com ESP32.
+- **Estado:** aprovada para validação na Etapa 2.
+
+## D-012 — Circuito incremental
+
+- **Decisão:** a Etapa 2 conterá somente ESP32, DHT22, potenciômetro, LED e resistor; o botão offline será incluído na Etapa 3.
+- **Motivo:** separar a evidência de sensoriamento da evidência de resiliência de rede.
+- **Estado:** aprovada para validação na Etapa 2.

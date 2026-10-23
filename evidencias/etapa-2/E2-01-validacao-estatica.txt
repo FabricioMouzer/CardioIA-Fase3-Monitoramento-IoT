@@ -1,0 +1,32 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-01 — Validação estática e lógica C++
+Data: 2026-10-23 (UTC)
+
+Comandos executados:
+1. python3 -m unittest tests/test_stage2_structure.py -v
+2. python3 tests/run_stage2_alert_logic.py
+3. python3 -m json.tool wokwi/diagram.json
+
+Resultados:
+- 5/5 testes estruturais aprovados.
+- 8/8 cenários da lógica real C++ aprovados.
+- diagram.json válido segundo o parser JSON.
+
+Cobertura estrutural:
+- Arquivos obrigatórios presentes.
+- DHT22, potenciômetro, LED e resistor declarados no circuito.
+- Conexões obrigatórias verificadas.
+- Biblioteca DHT declarada explicitamente.
+- Contrato da Etapa 2 respeitado; Wi-Fi, MQTT e resiliência offline permanecem fora desta etapa.
+
+Cenários da lógica de alerta:
+- BPM normal.
+- Bradicardia simulada.
+- Taquicardia simulada.
+- Temperatura elevada.
+- Limites exatos: 50 BPM, 120 BPM e 38,0 °C.
+- Falha de leitura do sensor.
+
+Estado desta evidência:
+- Aprovada para validação de código e estrutura.
+- Não substitui a execução no Wokwi nem o teste do link público em janela anônima.

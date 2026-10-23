@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Equipe CardioIA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -70, "left": 260, "attrs": { "temperature": "36.5", "humidity": "55" } },
+    { "type": "wokwi-potentiometer", "id": "bpm", "top": 70, "left": 270, "attrs": { "value": "512" } },
+    { "type": "wokwi-led", "id": "alertLed", "top": -105, "left": -125, "attrs": { "color": "red", "label": "ALERTA" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -38, "left": -105, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:3V3", "dht:VCC", "red", [ "h0" ] ],
+    [ "esp:GND.1", "dht:GND", "black", [ "h0" ] ],
+    [ "esp:D15", "dht:SDA", "green", [ "h0" ] ],
+    [ "esp:3V3", "bpm:VCC", "red", [ "h0" ] ],
+    [ "esp:GND.1", "bpm:GND", "black", [ "h0" ] ],
+    [ "esp:D34", "bpm:SIG", "blue", [ "h0" ] ],
+    [ "esp:D2", "alertLed:A", "red", [ "h0" ] ],
+    [ "alertLed:C", "r1:1", "black", [ "v0" ] ],
+    [ "r1:2", "esp:GND.2", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
