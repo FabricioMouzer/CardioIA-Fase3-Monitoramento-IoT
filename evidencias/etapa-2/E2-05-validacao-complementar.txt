@@ -1,0 +1,39 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-05 — Validação complementar dos logs e capturas
+Data: 24/10/2026 (America/Sao_Paulo)
+
+[COMANDO]
+python3 -m unittest tests/test_stage2_structure.py -v
+
+[RESULTADO]
+test_circuit_has_two_sensors_and_led ... ok
+test_continuous_evidence_is_preserved ... ok
+test_firmware_matches_stage2_contract ... ok
+test_library_is_explicit ... ok
+test_required_connections ... ok
+test_required_files_exist ... ok
+
+Ran 6 tests
+OK
+
+[COMANDO]
+python3 tests/run_stage2_alert_logic.py
+
+[RESULTADO]
+Lógica C++: 8 cenários de alerta aprovados.
+
+[COMANDO]
+python3 -m json.tool wokwi/diagram.json
+
+[RESULTADO]
+JSON válido; código de saída 0.
+
+[INTEGRIDADE DAS CAPTURAS]
+f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c  E2-03-alerta-normal-sem-reinicio.jpg
+77575d137daf0d43ef742b69c7efacb09a4a5c3ea01d6f2575759005c9fe0e40  E2-04-dht-falha-recuperacao-sem-reinicio.jpg
+
+[PORTÃO]
+- T2-11 aprovado: logs contínuos e sem novo BOOT.
+- T2-12 parcial: capturas do Serial validadas; faltam circuito e LED completos.
+- T2-10 pendente: falta publicar e testar o link Wokwi sem sessão.
+- Etapa 2 permanece aberta; Etapa 3 permanece bloqueada.

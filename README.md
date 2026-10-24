@@ -33,7 +33,7 @@ Os e-mails dos integrantes não serão publicados no repositório.
 |---|---|---|
 | 0 | Governança, repositório e critérios | Confirmada e finalizada em 23/10/2026 |
 | 1 | Requisitos e arquitetura | Confirmada e finalizada em 23/10/2026 |
-| 2 | Sensores e circuito no Wokwi | Em execução; T2-01 a T2-09 aprovados, link público T2-10 pendente |
+| 2 | Sensores e circuito no Wokwi | Em execução; T2-01 a T2-09 e T2-11 aprovados; link público T2-10 e capturas completas T2-12 pendentes |
 | 3 | Resiliência offline no Edge | Bloqueada |
 | 4 | MQTT e broker | Bloqueada |
 | 5 | Dashboard e alertas no Node-RED | Bloqueada |
@@ -50,6 +50,7 @@ Consulte [o plano de etapas](docs/PLANO_ETAPAS.md), [os critérios de validaçã
 - Um item só recebe `[x]` quando houver evidência correspondente.
 - Prints, logs, links e vídeos devem abrir e demonstrar exatamente o requisito declarado.
 - Limitações e falhas devem permanecer documentadas até sua resolução.
+- A publicação de um link não encerra uma etapa quando os logs e as capturas exigidos ainda não estiverem preservados.
 
 ## Privacidade e segurança
 

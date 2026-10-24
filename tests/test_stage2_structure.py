@@ -1,4 +1,5 @@
 import json
+import hashlib
 import unittest
 from pathlib import Path
 
@@ -52,6 +53,30 @@ class Stage2StructureTests(unittest.TestCase):
     def test_library_is_explicit(self):
         libraries = (ROOT / "wokwi/libraries.txt").read_text(encoding="utf-8")
         self.assertEqual(libraries.strip(), "DHT sensor library for ESPx")
+
+    def test_continuous_evidence_is_preserved(self):
+        log = (ROOT / "evidencias/etapa-2/E2-03-transicoes-continuas.txt")
+        alert_capture = ROOT / "evidencias/etapa-2/E2-03-alerta-normal-sem-reinicio.jpg"
+        dht_capture = ROOT / "evidencias/etapa-2/E2-04-dht-falha-recuperacao-sem-reinicio.jpg"
+
+        self.assertTrue(log.is_file())
+        content = log.read_text(encoding="utf-8")
+        for token in (
+            "alert=high_bpm",
+            "alert=sensor_error",
+            "TEST dht_fault=off",
+            "alert=normal",
+            "Desvio relativo: +0,36%",
+        ):
+            self.assertIn(token, content)
+
+        expected_hashes = {
+            alert_capture: "f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c",
+            dht_capture: "77575d137daf0d43ef742b69c7efacb09a4a5c3ea01d6f2575759005c9fe0e40",
+        }
+        for path, expected in expected_hashes.items():
+            self.assertTrue(path.is_file())
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected)
 
 
 if __name__ == "__main__":

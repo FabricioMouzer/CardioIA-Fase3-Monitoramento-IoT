@@ -1,0 +1,52 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-03 — Transições contínuas sem reinício
+Data: 24/10/2026 (America/Sao_Paulo)
+Commit executado: 66140cd9a89f4447246c2983e565f615e196dcb8
+
+[T2-11A — ALERTA DE BPM ALTO -> NORMAL]
+BOOT CardioIA Fase 3 Etapa 2 — sensores sintéticos
+SAMPLE seq=1 uptime_ms=521 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+SAMPLE seq=2 uptime_ms=5529 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+SAMPLE seq=3 uptime_ms=10537 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+
+Resultado: aprovado. A sequência cresceu de 1 para 3 e houve somente uma mensagem BOOT.
+Isso comprova alerta e retorno ao normal na mesma execução, sem reinício.
+
+[T2-11B — FALHA DO DHT22 -> RECUPERAÇÃO]
+BOOT CardioIA Fase 3 Etapa 2 — sensores sintéticos
+TEST commands: F=falha DHT22, R=recuperacao DHT22
+SAMPLE seq=1 uptime_ms=521 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+SAMPLE seq=2 uptime_ms=5529 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+SAMPLE seq=3 uptime_ms=10537 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+TEST dht_fault=on
+SAMPLE seq=4 uptime_ms=15545 temp=-999.0C humidity=-1.0% bpm=110 sensor_valid=false alert_code=8 alert=sensor_error
+TEST dht_fault=off
+SAMPLE seq=5 uptime_ms=20553 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+
+Resultado: aprovado. A sequência cresceu de 1 para 5 e houve somente uma mensagem BOOT.
+Isso comprova falha sintética controlada e recuperação do DHT22 na mesma execução, sem reinício.
+
+[T2-09 — CADÊNCIA]
+Primeira amostra: uptime_ms=522
+Segunda amostra: uptime_ms=5540
+Intervalo observado: 5018 ms
+Alvo nominal: 5000 ms
+Desvio absoluto: +18 ms
+Desvio relativo: +0,36%
+Faixa de aceitação definida: 5000 a 5050 ms (atraso máximo de 1%)
+
+Justificativa: o firmware dispara quando millis() - lastSampleAt >= 5000. Portanto, não se
+espera disparo antecipado; a execução cooperativa, o delay(10), a leitura do DHT22 e a escrita
+serial podem produzir pequeno atraso. O valor de 5018 ms está dentro da tolerância documentada.
+O tempo avaliado é o uptime_ms do ESP32 simulado, não o tempo de parede do navegador.
+
+[CAPTURAS ASSOCIADAS]
+- E2-03-alerta-normal-sem-reinicio.jpg
+  SHA-256: f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c
+- E2-04-dht-falha-recuperacao-sem-reinicio.jpg
+  SHA-256: 77575d137daf0d43ef742b69c7efacb09a4a5c3ea01d6f2575759005c9fe0e40
+
+[PENDÊNCIA QUE IMPEDE O ENCERRAMENTO DA ETAPA 2]
+- T2-10: salvar/publicar o projeto no Wokwi e testar o link sem sessão.
+- A publicação do link, isoladamente, não finaliza a etapa; este log e as capturas também
+  precisam permanecer acessíveis no repositório.
