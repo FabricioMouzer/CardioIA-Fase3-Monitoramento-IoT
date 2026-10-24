@@ -12,6 +12,9 @@
 | E-104 | 1 | Validador executado no commit público `2fa0838` | `evidencias/etapa-1/E1-01-validacao-documental.txt` | 23/10/2026 | Codex | Aprovado |
 | E-105 | 1 | Revisão dos quatro integrantes | `docs/ETAPA_1_REVISAO_GRUPO.md` | 23/10/2026 | Equipe | Aprovado |
 | E-106 | 1 | Validação após aprovação coletiva | `evidencias/etapa-1/E1-03-validacao-final.txt` | 23/10/2026 | Codex | Aprovado |
+| E-201 | 2 | Estrutura, circuito e lógica C++ | `evidencias/etapa-2/E2-01-validacao-estatica.txt` | 23/10/2026 | Codex | Aprovado |
+| E-202 | 2 | Execução dos cenários T2-01 a T2-09 no Wokwi | `evidencias/etapa-2/E2-02-execucao-wokwi.txt` | 23/10/2026 | Codex | Aprovado |
+| E-203 | 2 | Link público do projeto Wokwi | Aguardando salvamento, publicação e teste anônimo | 23/10/2026 | Equipe | Pendente |
 
 ## Padrão de nomes
 

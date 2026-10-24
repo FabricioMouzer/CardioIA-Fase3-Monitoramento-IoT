@@ -1,0 +1,36 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-02 — Execução funcional no Wokwi
+Data: 23/10/2026 (America/Sao_Paulo)
+Commit: b5b08142d0f3eb94ce184a0b85992f0e8913e580
+
+[T2-01/T2-02 — BOOT E ESTADO NORMAL]
+BOOT CardioIA Fase 3 Etapa 2 — sensores sintéticos
+SAMPLE seq=1 uptime_ms=522 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+
+[T2-03 — BPM BAIXO]
+SAMPLE seq=1 uptime_ms=522 temp=36.5C humidity=55.0% bpm=40 sensor_valid=true alert_code=1 alert=low_bpm
+
+[T2-04 — BPM ALTO]
+SAMPLE seq=1 uptime_ms=522 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+
+[T2-05 — TEMPERATURA ALTA]
+SAMPLE seq=1 uptime_ms=522 temp=39.0C humidity=55.0% bpm=110 sensor_valid=true alert_code=4 alert=high_temperature
+
+[T2-06 — RETORNO AO NORMAL]
+SAMPLE seq=1 uptime_ms=522 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+
+[T2-07 — FALHA CONTROLADA DO DHT22]
+SAMPLE seq=1 uptime_ms=519 temp=-999.0C humidity=-1.0% bpm=110 sensor_valid=false alert_code=8 alert=sensor_error
+
+[T2-09 — CADÊNCIA]
+SAMPLE seq=1 uptime_ms=522 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+SAMPLE seq=2 uptime_ms=5540 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+Intervalo observado: 5018 ms.
+
+[RESTAURAÇÃO FINAL]
+- Ligação original esp:D15 -> dht:SDA restaurada.
+- diagram.json restaurado com comparação integral aprovada.
+- Execução final retornou alert=normal.
+
+[PENDÊNCIA]
+- T2-10: salvar/publicar o projeto e abrir o link do Wokwi sem sessão.

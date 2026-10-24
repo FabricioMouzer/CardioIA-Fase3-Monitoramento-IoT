@@ -33,7 +33,7 @@ Os e-mails dos integrantes não serão publicados no repositório.
 |---|---|---|
 | 0 | Governança, repositório e critérios | Confirmada e finalizada em 23/10/2026 |
 | 1 | Requisitos e arquitetura | Confirmada e finalizada em 23/10/2026 |
-| 2 | Sensores e circuito no Wokwi | Em execução; aguardando simulação e evidências |
+| 2 | Sensores e circuito no Wokwi | Em execução; T2-01 a T2-09 aprovados, link público T2-10 pendente |
 | 3 | Resiliência offline no Edge | Bloqueada |
 | 4 | MQTT e broker | Bloqueada |
 | 5 | Dashboard e alertas no Node-RED | Bloqueada |
