@@ -75,3 +75,10 @@
 - **Decisão:** a Etapa 2 conterá somente ESP32, DHT22, potenciômetro, LED e resistor; o botão offline será incluído na Etapa 3.
 - **Motivo:** separar a evidência de sensoriamento da evidência de resiliência de rede.
 - **Estado:** aprovada para validação na Etapa 2.
+
+## D-013 — Injeção reproduzível de falha do DHT22
+
+- **Decisão:** aceitar os comandos seriais `F` e `R` para ativar e remover uma falha sintética do DHT22 durante a mesma execução.
+- **Motivo:** produzir evidência contínua e reproduzível de `sensor_error` e recuperação sem reiniciar o ESP32 nem depender de desconexão física no simulador.
+- **Limitação:** é um recurso de teste do protótipo educacional; não representa uma falha física real nem deve ser usado como mecanismo clínico.
+- **Estado:** aprovada para completar a validação da Etapa 2.

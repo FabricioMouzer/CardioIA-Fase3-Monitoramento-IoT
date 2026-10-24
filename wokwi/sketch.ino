@@ -28,6 +28,20 @@ struct Sample {
 DHTesp dht;
 uint32_t nextSequence = 1;
 uint32_t lastSampleAt = 0;
+bool forceDhtFailure = false;
+
+void processTestCommands() {
+  while (Serial.available() > 0) {
+    const char command = static_cast<char>(Serial.read());
+    if (command == 'F' || command == 'f') {
+      forceDhtFailure = true;
+      Serial.println("TEST dht_fault=on");
+    } else if (command == 'R' || command == 'r') {
+      forceDhtFailure = false;
+      Serial.println("TEST dht_fault=off");
+    }
+  }
+}
 
 const char* primaryAlertLabel(uint8_t code) {
   if (code == ALERT_NONE) return "normal";
@@ -40,7 +54,8 @@ const char* primaryAlertLabel(uint8_t code) {
 
 Sample collectSample() {
   const TempAndHumidity reading = dht.getTempAndHumidity();
-  const bool sensorValid = !isnan(reading.temperature) && !isnan(reading.humidity);
+  const bool sensorValid = !forceDhtFailure && !isnan(reading.temperature) &&
+                           !isnan(reading.humidity);
   const int rawBpm = constrain(analogRead(Config::BPM_PIN), 0, 4095);
   const uint16_t bpm = map(rawBpm, 0, 4095, Config::BPM_MIN, Config::BPM_MAX);
 
@@ -80,11 +95,13 @@ void setup() {
   dht.setup(Config::DHT_PIN, DHTesp::DHT22);
 
   Serial.println("BOOT CardioIA Fase 3 Etapa 2 — sensores sintéticos");
+  Serial.println("TEST commands: F=falha DHT22, R=recuperacao DHT22");
   sampleAndReport();
   lastSampleAt = millis();
 }
 
 void loop() {
+  processTestCommands();
   if (millis() - lastSampleAt >= Config::SAMPLE_INTERVAL_MS) {
     lastSampleAt = millis();
     sampleAndReport();

@@ -39,6 +39,9 @@ class Stage2StructureTests(unittest.TestCase):
             "#include <DHTesp.h>",
             "SAMPLE_INTERVAL_MS = 5000",
             "sensor_valid=%s",
+            "TEST dht_fault=on",
+            "TEST dht_fault=off",
+            "processTestCommands();",
         ):
             self.assertIn(token, sketch)
         for token in ("BPM_LOW = 50", "BPM_HIGH = 120", "TEMP_HIGH_C = 38.0F"):
