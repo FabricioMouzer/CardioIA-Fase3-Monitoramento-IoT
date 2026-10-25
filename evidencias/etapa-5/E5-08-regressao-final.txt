@@ -1,0 +1,31 @@
+CARDIOIA — ETAPA 5 — REGRESSÃO E DISPONIBILIDADE FINAL
+Data: 25/10/2026
+
+Comandos e resultados:
+
+node tests/validate_stage5_flow.js
+Etapa 5: 29 verificações estruturais e lógicas aprovadas.
+
+python tests/validate_stage4_evidence.py
+Etapa 4: 20 verificações de evidência MQTT aprovadas.
+
+python -m unittest tests/test_stage4_structure.py tests/test_stage3_structure.py tests/test_stage2_structure.py
+Ran 20 tests — OK.
+
+python tests/run_stage4_payload_logic.py
+Payload MQTT: 13 campos de telemetria e status JSON aprovados.
+
+python tests/run_stage3_buffer_logic.py
+Lógica FIFO C++: 23 verificações aprovadas.
+
+python tests/run_stage2_alert_logic.py
+Lógica C++: 8 cenários de alerta aprovados.
+
+python tests/validate_stage1.py
+Etapa 1: documentos, 3 tópicos, contrato JSON e revisão do grupo validados.
+
+Disponibilidade HTTP:
+- /dashboard/monitoramento = HTTP 200.
+- / = HTTP 404 esperado, porque o editor administrativo está desabilitado.
+
+Resultado: regressão das Etapas 1–4 e portão da Etapa 5 APROVADOS.

@@ -115,5 +115,31 @@
 - **Motivo:** Fabrício não possui Node-RED no computador e a instalação isolada
   permite validar o flow sem alterar globalmente o sistema de um integrante.
 - **Versões:** Node-RED 5.0.9 e `@flowfuse/node-red-dashboard` 1.34.0.
-- **Estado:** instalação e importação aprovadas; MQTT real e evidência visual
-  continuam pendentes.
+- **Estado:** instalação, importação, MQTT real e evidência visual aprovados em
+  25/10/2026.
+
+## D-018 — Hospedagem pública do dashboard
+
+- **Decisão:** implantar `node-red/` como Web Service no Render, plano gratuito,
+  com `npm ci`, `npm start` e health check em `/dashboard/monitoramento`.
+- **Motivo:** oferecer acesso livre à equipe sem exigir instalação local do
+  Node-RED no computador de Fabrício.
+- **Limitação:** o serviço gratuito pode suspender após inatividade e demorar no
+  primeiro acesso seguinte.
+- **Estado:** implantado e validado em 25/10/2026.
+
+## D-019 — Superfície administrativa no ambiente público
+
+- **Decisão:** usar `NODE_RED_DISABLE_ADMIN=true` no Render e manter somente o
+  dashboard acessível publicamente.
+- **Motivo:** reduzir a superfície de ataque e impedir edição anônima do flow.
+- **Verificação:** dashboard HTTP 200; raiz administrativa HTTP 404.
+- **Estado:** aprovada e validada em 25/10/2026.
+
+## D-020 — Avisos de dependências
+
+- **Decisão:** registrar os avisos transitivos do `npm audit` e não executar
+  `npm audit fix --force` antes da entrega.
+- **Motivo:** a correção forçada pode introduzir mudanças incompatíveis; o
+  protótipo usa apenas dados sintéticos, editor desabilitado e versões fixadas.
+- **Estado:** risco não crítico documentado; reavaliar antes de uso produtivo.

@@ -1,0 +1,52 @@
+CARDIOIA — ETAPA 5 — CENÁRIOS DE ALERTA, RECUPERAÇÃO E LIMITES
+Data: 25/10/2026
+
+Todos os cenários abaixo foram executados na mesma sessão do Wokwi, sem
+reinicialização entre as transições, e observados no dashboard público.
+
+1. Normal
+   seq 2–12; BPM 110; temperatura 36,5 °C; sensor_valid=true;
+   alert_code=0; painel=NORMAL.
+
+2. BPM alto
+   seq 13–22; BPM 163; alert_code=2; alert=high_bpm;
+   painel=BPM ALTO; gráfico registrou a elevação.
+
+3. Temperatura alta
+   seq 23–29; temperatura 39,5 °C; BPM 110; alert_code=4;
+   alert=high_temperature; painel=TEMPERATURA ALTA; gauge em faixa vermelha.
+
+4. Falha do DHT22
+   comando serial F; seq 30–35; sensor_valid=false; temperature_c=-999,0;
+   humidity_pct=-1,0; alert_code=8; alert=sensor_error;
+   painel=FALHA DO SENSOR.
+
+5. Recuperação sem reinício
+   comando serial R; seq 36–55; sensor_valid=true; temperatura 36,5 °C;
+   BPM 110; alert_code=0; painel voltou a NORMAL.
+
+6. BPM baixo
+   seq 56–61; BPM 42; alert_code=1; alert=low_bpm;
+   painel=BPM BAIXO; gráfico registrou a queda.
+
+7. Limite inferior normal
+   seq 62–64; BPM exatamente 50; alert_code=0; painel=NORMAL.
+
+8. Limite superior normal
+   seq 65–67; BPM exatamente 120; alert_code=0; painel=NORMAL.
+
+9. Limite de temperatura normal
+   seq 68–72; temperatura exatamente 38,0 °C; alert_code=0; painel=NORMAL.
+
+10. Estado final restaurado
+    seq 73; BPM 110; temperatura 36,5 °C; umidade 55%; alert_code=0;
+    source=live; buffer_pending=0; dropped_samples=0; painel=NORMAL.
+
+Correspondência visual:
+- E5-03-dashboard-normal-online.jpg preserva o estado final normal e, no
+  gráfico temporal, os patamares de aproximadamente 163 e 42 BPM.
+- E5-04-wokwi-mqtt-online.jpg preserva a origem dos dados e o log de publicação.
+- Os valores, sequências e códigos acima foram lidos do log serial contínuo e
+  conferidos na interface antes de cada mudança de cenário.
+
+Resultado: 10/10 cenários APROVADOS.

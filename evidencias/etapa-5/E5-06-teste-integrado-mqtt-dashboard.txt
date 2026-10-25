@@ -1,0 +1,33 @@
+CARDIOIA — ETAPA 5 — TESTE INTEGRADO WOKWI → MQTT → NODE-RED
+Data: 25/10/2026
+
+Origem:
+https://wokwi.com/projects/478851580032675841
+
+Destino:
+https://cardioia-fase3-dashboard.onrender.com/dashboard/monitoramento
+
+Fluxo comprovado:
+1. O ESP32 simulado leu DHT22 e potenciômetro de BPM.
+2. O firmware publicou JSON no broker HiveMQ.
+3. O Node-RED hospedado no Render recebeu o tópico de telemetria.
+4. O validador aceitou os 13 campos do contrato schema_version=1.
+5. Gráfico, gauges, condição, sequência, origem e estado foram atualizados.
+
+Execução final correlacionada:
+- seq=1: amostra inicial armazenada e sincronizada como source=buffered.
+- seq=2 a seq=12: publicações source=live, fila=0, descartes=0.
+- Dashboard em seq=8: NORMAL, live, fila 0, descartes 0, dispositivo online,
+  temperatura 36,5 °C e umidade 55%.
+- Todos os MQTT_PUBLISH registrados retornaram telemetry=true, alert=true e
+  accepted=true.
+
+Capturas preservadas:
+- E5-03-dashboard-normal-online.jpg: dashboard público com gráfico e gauges.
+- E5-04-wokwi-mqtt-online.jpg: simulador e log MQTT da mesma execução.
+
+Hashes SHA-256:
+- E5-03: ac1440e0d9c90affc6a7620db80d3eaa1abe476229e89906f3ae9f48b29e5bc7
+- E5-04: d6971c1dba41ae6034d6f31ed8c74776169c0435ee0890fa51878d67522053ae
+
+Resultado: APROVADO.

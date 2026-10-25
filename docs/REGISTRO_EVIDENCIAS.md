@@ -44,6 +44,13 @@
 | E-409 | 4 | Encerramento formal | `docs/ETAPA_4_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 | E-501 | 5 | Início controlado e diagnóstico do ambiente | `evidencias/etapa-5/E5-01-inicio-da-etapa.txt` | 25/10/2026 | Codex | Aprovado |
 | E-502 | 5 | Instalação isolada e importação do flow | `evidencias/etapa-5/E5-02-instalacao-e-importacao.txt` | 25/10/2026 | Codex | Aprovado; MQTT real pendente |
+| E-503 | 5 | Dashboard normal, online, gráfico e gauges | `evidencias/etapa-5/E5-03-dashboard-normal-online.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-504 | 5 | Wokwi online e publicação MQTT | `evidencias/etapa-5/E5-04-wokwi-mqtt-online.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-505 | 5 | Implantação pública no Render | `evidencias/etapa-5/E5-05-implantacao-render.txt` | 25/10/2026 | Codex | Live; HTTP 200 |
+| E-506 | 5 | Teste integrado Wokwi → HiveMQ → Node-RED | `evidencias/etapa-5/E5-06-teste-integrado-mqtt-dashboard.txt` | 25/10/2026 | Codex | Aprovado |
+| E-507 | 5 | Normal, alertas, falha, recuperação e limites | `evidencias/etapa-5/E5-07-cenarios-alerta-limites.txt` | 25/10/2026 | Codex | 10/10 cenários aprovados |
+| E-508 | 5 | Regressão das Etapas 1–4 e disponibilidade final | `evidencias/etapa-5/E5-08-regressao-final.txt` | 25/10/2026 | Codex | Aprovado |
+| E-509 | 5 | Encerramento formal | `docs/ETAPA_5_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 
 ## Padrão de nomes
 

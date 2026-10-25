@@ -55,7 +55,9 @@ class Stage4StructureTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         plan = (ROOT / "docs/ETAPA_4_PLANO_TESTES.md").read_text(encoding="utf-8")
         conclusion = (ROOT / "docs/ETAPA_4_CONCLUSAO.md").read_text(encoding="utf-8")
-        self.assertIn("Etapas 0 a 4 confirmadas e finalizadas", readme)
+        self.assertIn(
+            "| 4 | MQTT e broker | Confirmada e finalizada", readme
+        )
         self.assertNotIn("- [ ] **T4-", plan)
         self.assertIn("FECHADO — ETAPA CONFIRMADA E FINALIZADA", plan)
         self.assertIn("Etapa 5 está tecnicamente", conclusion)
