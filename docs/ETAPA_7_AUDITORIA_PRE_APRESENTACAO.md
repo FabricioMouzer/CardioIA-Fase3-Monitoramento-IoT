@@ -56,12 +56,11 @@ compatível.
 
 1. Obter no Portal FIAP a data e o horário exatos da entrega e registrar a
    evidência.
-2. Criar a apresentação pós-auditoria e disponibilizar a versão pública.
-3. Receber de cada integrante a confirmação `APROVADO SEM CORREÇÕES` ou tratar
+2. Receber de cada integrante a confirmação `APROVADO SEM CORREÇÕES` ou tratar
    as correções solicitadas.
-4. Concluir T7-14, T7-15 e T7-16 e emitir o encerramento formal da Etapa 7.
-5. Iniciar a Etapa 8 somente após esse encerramento.
-6. Na Etapa 8, revisar o barema, criar a release final, realizar a entrega no
+3. Concluir T7-14, T7-15 e T7-16 e emitir o encerramento formal da Etapa 7.
+4. Iniciar a Etapa 8 somente após esse encerramento.
+5. Na Etapa 8, revisar o barema, criar a release final, realizar a entrega no
    Portal FIAP e preservar o comprovante.
 
 O vídeo e os desafios “Ir Além” permanecem opcionais e não bloqueiam o núcleo

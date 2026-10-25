@@ -67,6 +67,7 @@
 | E-706 | 7 | Acesso público aos seis destinos | `evidencias/etapa-7/E7-03-links-publicos.txt` | 25/10/2026 | Codex | HTTP 200 sem cookies |
 | E-707 | 7 | Diagnóstico e correção do status retido no dashboard | `evidencias/etapa-7/E7-04-diagnostico-status-dashboard.txt` | 25/10/2026 | Fabrício / Codex | Aprovado localmente e no ambiente público; fila 0 |
 | E-708 | 7 | Auditoria pré-apresentação | `docs/ETAPA_7_AUDITORIA_PRE_APRESENTACAO.md` e `evidencias/etapa-7/E7-05-auditoria-pre-apresentacao.txt` | 25/10/2026 | Codex | Núcleo aprovado; pendências administrativas identificadas |
+| E-709 | 7 | Apresentação pós-auditoria para revisão da equipe | `docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx` | 25/10/2026 | Codex | 14 slides, 8 imagens, 6 links; aguardando quatro aprovações |
 
 ## Padrão de nomes
 

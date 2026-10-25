@@ -13,7 +13,7 @@ o pacote.
 | Relatório Parte 1 | PDF A4 com quatro páginas e links clicáveis |
 | Relatório Parte 2 | PDF A4 com cinco páginas e links clicáveis |
 | README | arquitetura, tecnologias, execução, limites e acessos |
-| PowerPoint | 12 slides, 9 imagens incorporadas e 5 links públicos |
+| PowerPoint de revisão | 14 slides, 8 imagens incorporadas e 6 links públicos |
 | Revisão do grupo | checklist e mensagem de WhatsApp preparados |
 
 ## Revisão visual
@@ -23,7 +23,7 @@ integral. Uma primeira paginação com duas páginas quase vazias foi rejeitada.
 quebras foram corrigidas e a versão atual não apresenta corte, sobreposição,
 página vazia ou texto ilegível.
 
-Os 12 slides também foram renderizados e inspecionados. A primeira exportação
+Os 14 slides também foram renderizados e inspecionados. A primeira exportação
 do PowerPoint mostrou espaços reservados em vez das capturas e setas invertidas
 na arquitetura. Essa versão não foi publicada. A versão `v2` incorpora as
 imagens no arquivo, corrige o fluxo e ajusta o slide do dashboard.
@@ -32,8 +32,8 @@ imagens no arquivo, corrige o fluxo e ajusta o slide do dashboard.
 
 O script [`tests/validate_stage7_artifacts.py`](../tests/validate_stage7_artifacts.py)
 aprovou 21 verificações, incluindo existência e tamanho dos arquivos, número de
-páginas, conteúdo técnico, anotações de links nos PDFs, 12 slides, imagens
-incorporadas, cinco hyperlinks e referências no README.
+páginas, conteúdo técnico, anotações de links nos PDFs, 14 slides, imagens
+incorporadas, hyperlinks e referências no README.
 
 A regressão preservou os resultados das Etapas 1–6: 38 verificações integradas,
 35 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
@@ -72,7 +72,7 @@ HTTP 404.
 ```text
 2bd248d778eb8519c00f1b113e7fe29cba5f380d033e270f3d4708741f51ae4e  CardioIA_Parte_1_Edge_Computing.pdf
 26ec56f00c1bcaccd0dcd09eee3274312153dede29dad8d500684465ea70ea81  CardioIA_Parte_2_MQTT_Dashboard.pdf
-9b93c0ef6f7319e48661964d6474ce27192f01bda2503bb72371b058ca439eb2  CardioIA_Fase3_Apresentacao_Equipe_v2.pptx
+4230439efa6f7671a24f8cebfd6610d30eabc27fc698ae95a9fb91b5aa453844  CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx
 ```
 
 ## Pendências para encerramento

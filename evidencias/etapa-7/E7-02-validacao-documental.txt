@@ -4,7 +4,7 @@ Data: 25/10/2026
 ARTEFATOS
 - Parte 1: PDF A4, 4 páginas, 54.116 bytes.
 - Parte 2: PDF A4, 5 páginas, 56.215 bytes.
-- PowerPoint: 12 slides, 780.241 bytes, 9 imagens e 5 hyperlinks.
+- PowerPoint de revisão: 14 slides, 776.761 bytes, 8 imagens e 6 hyperlinks.
 
 TESTES
 Etapa 7: 19 verificações documentais aprovadas.
@@ -19,13 +19,13 @@ Etapa 1: documentos, tópicos, contrato e revisão validados.
 
 REVISÃO VISUAL
 - 9/9 páginas de PDF inspecionadas após correção da paginação.
-- 12/12 slides inspecionados após incorporar as imagens e corrigir as setas.
+- 14/14 slides inspecionados após incorporar as imagens e revisar o conteúdo pós-auditoria.
 - nenhum corte, sobreposição, página vazia ou espaço reservado na versão aceita.
 
 HASHES SHA-256
 2bd248d778eb8519c00f1b113e7fe29cba5f380d033e270f3d4708741f51ae4e  CardioIA_Parte_1_Edge_Computing.pdf
-5fd1cdaacaac4139f74921ce3abb57c19312c2298f6befc3232c1abdb97f1f7d  CardioIA_Parte_2_MQTT_Dashboard.pdf
-9b93c0ef6f7319e48661964d6474ce27192f01bda2503bb72371b058ca439eb2  CardioIA_Fase3_Apresentacao_Equipe_v2.pptx
+26ec56f00c1bcaccd0dcd09eee3274312153dede29dad8d500684465ea70ea81  CardioIA_Parte_2_MQTT_Dashboard.pdf
+4230439efa6f7671a24f8cebfd6610d30eabc27fc698ae95a9fb91b5aa453844  CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx
 
 ESTADO
 Preparação técnica aprovada. Etapa 7 permanece aberta para publicação e revisão

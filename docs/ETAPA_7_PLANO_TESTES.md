@@ -5,7 +5,7 @@
 - [x] **T7-03 — Relatório Parte 1:** quatro páginas, conteúdo técnico e links.
 - [x] **T7-04 — Relatório Parte 2:** cinco páginas, conteúdo técnico e links.
 - [x] **T7-05 — README final:** instalação, execução, arquitetura e limitações.
-- [x] **T7-06 — PowerPoint:** 12 slides editáveis com evidências incorporadas.
+- [x] **T7-06 — PowerPoint:** 14 slides editáveis para revisão da equipe, com evidências incorporadas.
 - [x] **T7-07 — Revisão visual:** slides e nove páginas de PDF revisados integralmente.
 - [x] **T7-08 — Links internos:** todos os caminhos relativos abrem corretamente.
 - [x] **T7-09 — Links públicos:** GitHub, PDFs, PowerPoint, Wokwi e dashboard retornaram HTTP 200 sem cookies.
@@ -15,6 +15,7 @@
 - [x] **T7-13 — Pacote de revisão:** mensagem e checklist preparados para o grupo.
 - [x] **T7-13A — Correção do status:** flow publicado e dashboard público comprovado com telemetria ativa, `online`, fila zero e gráfico atualizado.
 - [x] **T7-13B — Auditoria pré-apresentação:** requisitos, regressão, links, dependências, segurança e consistência revisados.
+- [x] **T7-13C — Apresentação pós-auditoria:** versão de revisão publicada com o estado real e as pendências para 100%.
 - [ ] **T7-14 — Revisão da equipe:** quatro integrantes analisaram os materiais.
 - [ ] **T7-15 — Correções da equipe:** solicitações resolvidas ou ausência confirmada.
 - [ ] **T7-16 — Encerramento:** documentos finais e aprovação registrados.

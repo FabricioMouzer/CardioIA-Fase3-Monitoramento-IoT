@@ -10,7 +10,7 @@ from pypdf import PdfReader
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_1 = ROOT / "docs" / "relatorios" / "CardioIA_Parte_1_Edge_Computing.pdf"
 REPORT_2 = ROOT / "docs" / "relatorios" / "CardioIA_Parte_2_MQTT_Dashboard.pdf"
-PPTX = ROOT / "docs" / "apresentacao" / "CardioIA_Fase3_Apresentacao_Equipe_v2.pptx"
+PPTX = ROOT / "docs" / "apresentacao" / "CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx"
 AUDIT_DOC = ROOT / "docs" / "ETAPA_7_AUDITORIA_PRE_APRESENTACAO.md"
 AUDIT_EVIDENCE = ROOT / "evidencias" / "etapa-7" / "E7-05-auditoria-pre-apresentacao.txt"
 checks = 0
@@ -56,8 +56,8 @@ with ZipFile(PPTX) as archive:
         for name in names
         if name.startswith("ppt/slides/_rels/") and name.endswith(".rels")
     )
-require(len(slides) == 12, "A apresentação deve conter 12 slides")
-require(len(images) >= 9, "As capturas de evidência não foram incorporadas")
+require(len(slides) == 14, "A apresentação de revisão deve conter 14 slides")
+require(len(images) >= 8, "As capturas de evidência não foram incorporadas")
 for url in [
     "https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT",
     "https://wokwi.com/projects/478851580032675841",
@@ -70,6 +70,6 @@ for url in [
 readme = (ROOT / "README.md").read_text(encoding="utf-8")
 require("RELATORIO_EDGE_COMPUTING.md" in readme, "README sem relatório da Parte 1")
 require("RELATORIO_MQTT_DASHBOARD.md" in readme, "README sem relatório da Parte 2")
-require("CardioIA_Fase3_Apresentacao_Equipe_v2.pptx" in readme, "README sem PowerPoint")
+require("CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx" in readme, "README sem PowerPoint de revisão")
 
 print(f"Etapa 7: {checks} verificações documentais aprovadas; revisão do grupo ainda necessária.")

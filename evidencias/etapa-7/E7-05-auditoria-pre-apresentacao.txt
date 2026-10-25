@@ -39,6 +39,6 @@ Correção de publicação e reteste do Render
 
 Pendências de liberação
 - Prazo exato do Portal FIAP não comprovado.
-- Nova apresentação pós-auditoria ainda será produzida.
+- Apresentação pós-auditoria produzida e validada em 14 slides.
 - Quatro aprovações da equipe ainda não registradas.
 - Etapa 8 permanece bloqueada.

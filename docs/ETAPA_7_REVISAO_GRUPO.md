@@ -4,7 +4,7 @@
 
 - [Relatório Parte 1 — Edge Computing](relatorios/CardioIA_Parte_1_Edge_Computing.pdf)
 - [Relatório Parte 2 — MQTT e dashboard](relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf)
-- [Apresentação PowerPoint](apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx)
+- [Apresentação PowerPoint para revisão da equipe](apresentacao/CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx)
 - [Projeto público no Wokwi](https://wokwi.com/projects/478851580032675841)
 - [Dashboard público](https://cardioia-fase3-dashboard.onrender.com/dashboard/monitoramento)
 - [Evidências integradas](../evidencias/etapa-6/)
