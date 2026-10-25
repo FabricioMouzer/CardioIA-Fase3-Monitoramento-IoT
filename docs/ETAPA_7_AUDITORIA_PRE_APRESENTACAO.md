@@ -37,6 +37,10 @@ integrantes, do registro inequívoco do prazo no Portal FIAP e da Etapa 8.
 4. O relatório da Parte 2 e o README foram alinhados ao comportamento atual.
 5. Entradas históricas do registro de evidências agora apontam para a resolução.
 6. A regra de uma única simulação do Wokwi por vez foi documentada.
+7. O `package-lock.json` corrompido durante a primeira publicação da auditoria
+   foi reenviado como JSON íntegro. O commit `dd83ed3` gerou o deploy
+   `dep-dbf3btgm7kps73fk77b0`, marcado como `live`; o dashboard respondeu HTTP
+   200 e a raiz administrativa permaneceu bloqueada com HTTP 404.
 
 ## Risco residual aceito
 

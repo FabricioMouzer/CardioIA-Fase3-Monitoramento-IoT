@@ -60,6 +60,13 @@ O commit `83090f3` foi implantado e validado no endereço público com o Wokwi
 deliberadamente parado; a mensagem orientativa apareceu com fila e descartes
 zerados.
 
+Na auditoria pré-apresentação, a primeira publicação do novo
+`package-lock.json` chegou corrompida ao GitHub e o Render rejeitou `npm ci`.
+O arquivo local já validado foi reenviado em codificação binária segura no
+commit `dd83ed3`. O deploy `dep-dbf3btgm7kps73fk77b0` ficou `live`; no reteste,
+`/dashboard/monitoramento` respondeu HTTP 200 e a raiz administrativa respondeu
+HTTP 404.
+
 ## Hashes SHA-256
 
 ```text

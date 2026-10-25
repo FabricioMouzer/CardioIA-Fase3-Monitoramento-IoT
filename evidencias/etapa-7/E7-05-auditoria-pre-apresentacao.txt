@@ -29,6 +29,14 @@ Segurança
 - Editor e API administrativos desabilitados no Render.
 - Risco residual transitivo documentado em D-020.
 
+Correção de publicação e reteste do Render
+- A primeira publicação da auditoria levou um package-lock.json corrompido.
+- Sintoma: npm ci encerrou com EUSAGE por não reconhecer um lockfile válido.
+- Correção: arquivo JSON íntegro publicado no commit dd83ed3.
+- Deploy: dep-dbf3btgm7kps73fk77b0, estado live em 25/10/2026.
+- Dashboard público: HTTP 200.
+- Raiz administrativa: HTTP 404, conforme proteção configurada.
+
 Pendências de liberação
 - Prazo exato do Portal FIAP não comprovado.
 - Nova apresentação pós-auditoria ainda será produzida.
