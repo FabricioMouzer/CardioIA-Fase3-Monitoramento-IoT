@@ -1,0 +1,35 @@
+EVIDÊNCIA E3-01 — INÍCIO E VALIDAÇÃO ESTÁTICA DA ETAPA 3
+Data: 25/10/2026
+Ambiente: cópia de trabalho do repositório CardioIA-Fase3-Monitoramento-IoT
+Responsável: Codex
+
+Escopo preparado:
+- FIFO circular em RAM com capacidade de 2.160 amostras;
+- intervalo nominal de 5.000 ms e retenção calculada de três horas;
+- substituição da amostra mais antiga no estouro;
+- contador explícito dropped_samples;
+- botão no GPIO 4 e comandos O/N para conectividade simulada;
+- sincronização em ordem pelo Monitor Serial;
+- MQTT e Wi-Fi real não iniciados.
+
+Consumo calculado do armazenamento:
+- sizeof(Sample): 20 bytes;
+- 2.160 posições: 43.200 bytes (42,19 KiB), mais controle do FIFO;
+- alocação fixa, sem fragmentação por crescimento dinâmico.
+
+Validações executadas:
+- tests/test_stage3_structure.py
+- tests/run_stage3_buffer_logic.py
+- regressão de tests/test_stage2_structure.py
+- regressão de tests/run_stage2_alert_logic.py
+
+Resultados:
+- 14/14 testes estruturais e regressivos aprovados;
+- 18/18 verificações da lógica FIFO C++ aprovadas;
+- 8/8 cenários da lógica de alertas aprovados;
+- documentos, três tópicos e contrato JSON da Etapa 1 validados;
+- diagram.json válido.
+
+Estado: ETAPA EM EXECUÇÃO.
+Este arquivo não comprova execução no Wokwi. Os testes T3-07 a T3-13 e suas
+evidências permanecem obrigatórios antes do encerramento.

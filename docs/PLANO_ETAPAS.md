@@ -140,7 +140,9 @@ Todos os entregáveis acima devem estar disponíveis publicamente e sem contradi
 - relatório da Parte 1 com pelo menos uma página;
 - relatório da Parte 2 com pelo menos duas páginas;
 - README final;
-- apresentação ou vídeo, se exigido/planejado;
+- apresentação profissional em PowerPoint com links públicos para GitHub,
+  Wokwi, relatórios e evidências;
+- vídeo, se exigido/planejado;
 - revisão dos quatro integrantes.
 
 ### Evidências

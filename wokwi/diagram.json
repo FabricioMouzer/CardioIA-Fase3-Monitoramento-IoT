@@ -7,7 +7,8 @@
     { "type": "wokwi-dht22", "id": "dht", "top": -70, "left": 260, "attrs": { "temperature": "36.5", "humidity": "55" } },
     { "type": "wokwi-potentiometer", "id": "bpm", "top": 70, "left": 270, "attrs": { "value": "512" } },
     { "type": "wokwi-led", "id": "alertLed", "top": -105, "left": -125, "attrs": { "color": "red", "label": "ALERTA" } },
-    { "type": "wokwi-resistor", "id": "r1", "top": -38, "left": -105, "attrs": { "value": "220" } }
+    { "type": "wokwi-resistor", "id": "r1", "top": -38, "left": -105, "attrs": { "value": "220" } },
+    { "type": "wokwi-pushbutton", "id": "offlineButton", "top": 110, "left": -145, "attrs": { "color": "blue", "label": "ONLINE / OFFLINE" } }
   ],
   "connections": [
     [ "esp:3V3", "dht:VCC", "red", [ "h0" ] ],
@@ -18,7 +19,9 @@
     [ "esp:D34", "bpm:SIG", "blue", [ "h0" ] ],
     [ "esp:D2", "alertLed:A", "red", [ "h0" ] ],
     [ "alertLed:C", "r1:1", "black", [ "v0" ] ],
-    [ "r1:2", "esp:GND.2", "black", [ "h0" ] ]
+    [ "r1:2", "esp:GND.2", "black", [ "h0" ] ],
+    [ "esp:D4", "offlineButton:1.l", "purple", [ "h0" ] ],
+    [ "offlineButton:2.l", "esp:GND.2", "black", [ "h0" ] ]
   ],
   "dependencies": {}
 }

@@ -26,6 +26,7 @@
 | E-212 | 2 | Correspondência entre link, circuito, LED e logs | `evidencias/etapa-2/E2-09-validacao-final-link-publico.txt` | 25/10/2026 | Codex | Aprovado |
 | E-213 | 2 | Encerramento formal da etapa | `docs/ETAPA_2_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 | E-214 | 2 | Portão automatizado final e correção da inconsistência | `evidencias/etapa-2/E2-10-portao-final.txt` | 25/10/2026 | Codex | 7/7 testes + 8/8 cenários aprovados |
+| E-301 | 3 | Blueprint, buffer limitado e início formal | `docs/ETAPA_3_BLUEPRINT.md` e `evidencias/etapa-3/E3-01-inicio-e-validacao-estatica.txt` | 25/10/2026 | Codex | 14/14 testes + 18/18 verificações FIFO; execução Wokwi pendente |
 
 ## Padrão de nomes
 

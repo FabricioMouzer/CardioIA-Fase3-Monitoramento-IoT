@@ -82,3 +82,11 @@
 - **Motivo:** produzir evidência contínua e reproduzível de `sensor_error` e recuperação sem reiniciar o ESP32 nem depender de desconexão física no simulador.
 - **Limitação:** é um recurso de teste do protótipo educacional; não representa uma falha física real nem deve ser usado como mecanismo clínico.
 - **Estado:** aprovada para completar a validação da Etapa 2.
+
+## D-014 — Controle reproduzível da conectividade simulada
+
+- **Decisão:** usar um botão no GPIO 4 para alternar entre online e offline e manter os comandos seriais `O` e `N` como mecanismo determinístico de teste.
+- **Motivo:** o botão demonstra a interação no circuito; os comandos permitem produzir logs contínuos e repetíveis sem depender do tempo de um clique manual.
+- **Comportamento:** ao ficar offline, cada leitura entra no FIFO; ao voltar online, as pendências são enviadas em ordem antes das novas leituras.
+- **Limitação:** a conectividade é uma variável booleana e o envio é representado por `Serial.println`/`Serial.printf`, conforme permitido no enunciado. MQTT pertence à Etapa 4.
+- **Estado:** aprovada tecnicamente para execução da Etapa 3.
