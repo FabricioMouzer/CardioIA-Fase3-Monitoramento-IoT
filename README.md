@@ -69,6 +69,12 @@ inicie a simulação. O potenciômetro altera o BPM. O botão azul alterna a
 conectividade simulada. Os comandos seriais `O`, `N`, `F` e `R` permitem testar
 offline, online, falha do DHT22 e recuperação.
 
+O dashboard é público, mas os dados em tempo real aparecem somente enquanto a
+simulação do Wokwi está em execução. Ao abrir o painel com o simulador parado,
+`offline_unexpected` indica o Last Will MQTT esperado — não uma falha do site.
+Com telemetria válida, o cartão **Dispositivo** reafirma o estado online e mostra
+a fila e os descartes atuais.
+
 ### Dashboard local
 
 Com Node.js instalado:

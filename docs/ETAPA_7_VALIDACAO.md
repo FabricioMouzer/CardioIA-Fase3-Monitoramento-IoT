@@ -36,8 +36,20 @@ páginas, conteúdo técnico, anotações de links nos PDFs, 12 slides, imagens
 incorporadas, cinco hyperlinks e referências no README.
 
 A regressão preservou os resultados das Etapas 1–6: 38 verificações integradas,
-29 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
+30 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
 verificações do FIFO, oito cenários de alerta e validação documental da Etapa 1.
+
+## Correção durante a revisão
+
+Uma verificação manual do grupo encontrou o cartão **Dispositivo** em
+`offline_unexpected`, embora o dashboard estivesse disponível. O endpoint
+respondia HTTP 200; o valor era o Last Will retido de uma sessão anterior. Uma
+nova simulação comprovou o buffer da primeira amostra, a sincronização com fila
+zero e o recebimento de telemetria ao vivo. Como o cartão ainda conservava o
+status antigo, o flow foi corrigido para que toda telemetria válida reafirme
+`online (telemetria ativa)`, sem remover o Last Will. A ocorrência, a causa, os
+logs e a validação estão em
+[`E7-04-diagnostico-status-dashboard.txt`](../evidencias/etapa-7/E7-04-diagnostico-status-dashboard.txt).
 
 ## Hashes SHA-256
 

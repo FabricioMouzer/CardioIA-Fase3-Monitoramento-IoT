@@ -65,6 +65,7 @@
 | E-704 | 7 | PowerPoint profissional e revisão visual | `docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx` e `evidencias/etapa-7/E7-02-validacao-documental.txt` | 25/10/2026 | Codex | 12 slides; aprovado tecnicamente |
 | E-705 | 7 | Pacote de revisão dos integrantes | `docs/ETAPA_7_REVISAO_GRUPO.md` | 25/10/2026 | Equipe | Aguardando quatro aprovações |
 | E-706 | 7 | Acesso público aos seis destinos | `evidencias/etapa-7/E7-03-links-publicos.txt` | 25/10/2026 | Codex | HTTP 200 sem cookies |
+| E-707 | 7 | Diagnóstico de status retido no dashboard | `evidencias/etapa-7/E7-04-diagnostico-status-dashboard.txt` | 25/10/2026 | Fabrício / Codex | Correção local aprovada; publicação pendente |
 
 ## Padrão de nomes
 

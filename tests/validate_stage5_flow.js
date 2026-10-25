@@ -36,18 +36,21 @@ ok(broker.broker === 'broker.hivemq.com' && broker.port === '1883', 'Broker dive
 ok(!broker.credentials && !broker.user && !broker.password, 'Credencial não permitida')
 
 const processor = nodes('function').find((node) => node.name === 'Validar e distribuir telemetria')
-ok(processor && processor.outputs === 7, 'Processador de telemetria inválido')
+ok(processor && processor.outputs === 8, 'Processador de telemetria inválido')
 const execute = vm.runInNewContext(`(function (msg) { ${processor.func} })`)
 const injects = Object.fromEntries(nodes('inject').map((node) => [node.name, JSON.parse(node.payload)]))
 
 function processCase (name) {
   const result = execute({ payload: injects[name] })
-  ok(Array.isArray(result) && result.length === 7, `${name}: saídas inválidas`)
+  ok(Array.isArray(result) && result.length === 8, `${name}: saídas inválidas`)
   return result
 }
 
 let result = processCase('Teste NORMAL')
 ok(result[0].payload === 80 && result[3].payload === 'NORMAL', 'Cenário normal falhou')
+ok(result[6].payload === 'online (telemetria ativa) | fila: 0 | descartes: 0' &&
+   result[6].ui_update.color === '#067647',
+   'Telemetria válida não reafirmou o estado online')
 result = processCase('Teste BPM ALTO')
 ok(result[3].payload === 'BPM ALTO' && result[3].ui_update.color === '#b42318', 'BPM alto falhou')
 result = processCase('Teste BPM BAIXO')
@@ -59,8 +62,8 @@ ok(result[3].payload === 'FALHA DO SENSOR', 'Falha de sensor não sinalizada')
 result = processCase('Teste LIMITES NORMAIS')
 ok(result[0].payload === 120 && result[1].payload === 38 && result[3].payload === 'NORMAL', 'Limites inclusivos falharam')
 result = processCase('Teste JSON INVÁLIDO')
-ok(result.slice(0, 6).every((value) => value === null) &&
-   /Campos ausentes|Contrato incompatível/.test(result[6].payload),
+ok(result.slice(0, 7).every((value) => value === null) &&
+   /Campos ausentes|Contrato incompatível/.test(result[7].payload),
    'Contrato inválido não foi isolado')
 
 const serialized = JSON.stringify(flows).toLowerCase()
