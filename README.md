@@ -20,7 +20,8 @@ Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 d
 - [Ler o relatório da Parte 2 — MQTT e dashboard](docs/RELATORIO_MQTT_DASHBOARD.md)
 - [Baixar o PDF da Parte 1](docs/relatorios/CardioIA_Parte_1_Edge_Computing.pdf)
 - [Baixar o PDF da Parte 2](docs/relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf)
-- [Baixar a apresentação para revisão da equipe](docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_Revisao_v2.pptx)
+- [Baixar a apresentação PowerPoint com links validados](docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_Revisao_v4_links_validados.pptx)
+- [Abrir a apresentação em PDF com links validados — recomendada para WhatsApp](docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_Revisao_v4_WhatsApp_compact.pdf)
 - [Abrir o checklist de revisão do grupo](docs/ETAPA_7_REVISAO_GRUPO.md)
 
 ## Visão geral
