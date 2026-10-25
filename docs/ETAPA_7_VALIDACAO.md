@@ -56,6 +56,9 @@ dispositivo como `online (telemetria ativa)`.
 Para impedir nova interpretação equivocada, a apresentação do Last Will também
 foi traduzida para `offline — inicie o Wokwi`, mantendo
 `offline_unexpected` inalterado no contrato MQTT.
+O commit `83090f3` foi implantado e validado no endereço público com o Wokwi
+deliberadamente parado; a mensagem orientativa apareceu com fila e descartes
+zerados.
 
 ## Hashes SHA-256
 

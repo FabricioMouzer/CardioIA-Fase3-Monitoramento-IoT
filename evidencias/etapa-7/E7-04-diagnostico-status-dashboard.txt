@@ -56,3 +56,12 @@ Estado
   - umidade: 55%;
   - BPM: 110, visível no gráfico.
 - Resultado: correção aprovada localmente e no ambiente público.
+
+Validação da mensagem offline
+- Commit de clareza: 83090f3df7548bcdfef7a8d98e9304860e768c4c.
+- Deploy Render: dep-dbf30qm7bikc73c0g9qg, estado live.
+- O Wokwi foi parado deliberadamente após a validação online.
+- O dashboard público exibiu:
+  "offline — inicie o Wokwi | fila: 0 | descartes: 0".
+- Resultado: o estado offline permanece tecnicamente correto e agora orienta
+  explicitamente o usuário sobre como iniciar o fluxo em tempo real.
