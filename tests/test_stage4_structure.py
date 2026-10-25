@@ -11,7 +11,10 @@ class Stage4StructureTests(unittest.TestCase):
             "wokwi/mqtt_payload.h",
             "docs/ETAPA_4_BLUEPRINT.md",
             "docs/ETAPA_4_PLANO_TESTES.md",
+            "docs/ETAPA_4_VALIDACAO.md",
+            "docs/ETAPA_4_CONCLUSAO.md",
             "tests/run_stage4_payload_logic.py",
+            "tests/validate_stage4_evidence.py",
         ):
             self.assertTrue((ROOT / relative).is_file(), relative)
 
@@ -48,12 +51,15 @@ class Stage4StructureTests(unittest.TestCase):
         for forbidden in ("mqtt_password", "api_key", "bearer ", "-----begin"):
             self.assertNotIn(forbidden, sketch)
 
-    def test_stage4_gate_is_open(self):
+    def test_stage4_gate_is_closed(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         plan = (ROOT / "docs/ETAPA_4_PLANO_TESTES.md").read_text(encoding="utf-8")
-        self.assertIn("Etapa 4 em execução", readme)
-        self.assertIn("- [ ] **T4-06", plan)
-        self.assertIn("ABERTO — ETAPA EM EXECUÇÃO", plan)
+        conclusion = (ROOT / "docs/ETAPA_4_CONCLUSAO.md").read_text(encoding="utf-8")
+        self.assertIn("Etapas 0 a 4 confirmadas e finalizadas", readme)
+        self.assertNotIn("- [ ] **T4-", plan)
+        self.assertIn("FECHADO — ETAPA CONFIRMADA E FINALIZADA", plan)
+        self.assertIn("Etapa 5 está tecnicamente", conclusion)
+        self.assertIn("não foi iniciada", conclusion)
 
 
 if __name__ == "__main__":

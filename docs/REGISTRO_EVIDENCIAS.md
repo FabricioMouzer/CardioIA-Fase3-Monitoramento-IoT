@@ -33,6 +33,15 @@
 | E-305 | 3 | Captura final correlacionada | `evidencias/etapa-3/E3-05-wokwi-ciclo-completo-pausado.jpg` | 25/10/2026 | Codex | Aprovado |
 | E-306 | 3 | Log final online → offline → sincronização | `evidencias/etapa-3/E3-06-log-final-ciclo-correlacionado.txt` | 25/10/2026 | Codex | 3 armazenadas, 3 sincronizadas, pendentes 0 |
 | E-307 | 3 | Portão automatizado e acesso público | `evidencias/etapa-3/E3-07-validacao-final.txt` | 25/10/2026 | Codex | Aprovado |
+| E-401 | 4 | Início, contrato MQTT e validação estática | `evidencias/etapa-4/E4-01-inicio-validacao-estatica.txt` | 25/10/2026 | Codex | Aprovado |
+| E-402 | 4 | Compilação, Wi-Fi, broker e publicação JSON | `evidencias/etapa-4/E4-02-compilacao-conexao.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-403 | 4 | Recebimento por assinante independente | `evidencias/etapa-4/E4-03-assinante-independente.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-404 | 4 | Alerta de BPM alto e circuito | `evidencias/etapa-4/E4-04-alerta-resiliencia.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-405 | 4 | Log contínuo do Wokwi | `evidencias/etapa-4/E4-05-log-wokwi-serial.txt` | 25/10/2026 | Codex | Aprovado |
+| E-406 | 4 | Log do cliente HiveMQ independente | `evidencias/etapa-4/E4-06-log-assinante-hivemq.txt` | 25/10/2026 | Codex | 3 tópicos e JSON recebidos |
+| E-407 | 4 | Link público sem sessão | `evidencias/etapa-4/E4-07-link-publico.txt` | 25/10/2026 | Codex | HTTP 200 e arquivos públicos |
+| E-408 | 4 | Portão automatizado e regressão | `evidencias/etapa-4/E4-08-validacao-automatizada.txt` | 25/10/2026 | Codex | Aprovado |
+| E-409 | 4 | Encerramento formal | `docs/ETAPA_4_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 
 ## Padrão de nomes
 

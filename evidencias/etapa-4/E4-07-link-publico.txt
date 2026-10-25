@@ -1,0 +1,11 @@
+EVIDÊNCIA E4-07 — ACESSO PÚBLICO AO WOKWI
+
+Data UTC: 25/10/2026
+URL: https://wokwi.com/projects/478851580032675841
+Teste: requisição HTTP sem cookies ou sessão autenticada.
+Resultado: HTTP/2 200.
+Título público observado: CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem.
+Arquivos públicos observados: sketch.ino, diagram.json, alert_logic.h,
+libraries.txt, edge_buffer.h e mqtt_payload.h.
+
+Conclusão: o projeto e o código da Etapa 4 podem ser lidos sem login.

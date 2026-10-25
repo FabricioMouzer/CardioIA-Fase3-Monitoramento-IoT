@@ -99,3 +99,11 @@
 - **Resiliência:** remover do FIFO somente após `publish()` retornar verdadeiro; sequência permite detectar duplicação.
 - **Segurança:** somente dados sintéticos; nenhuma senha; broker aberto inadequado para produção.
 - **Estado:** aprovada tecnicamente para validação da Etapa 4.
+
+## D-016 — Evidência externa e literais JSON
+
+- **Decisão:** validar o MQTT com um cliente WebSocket separado e usar literais
+  C++ `R"json(...)json"` na composição dos payloads.
+- **Motivo:** impedir que aceite local seja confundido com entrega ponta a ponta
+  e evitar erros de escape observados na primeira compilação.
+- **Estado:** validada e encerrada na Etapa 4 em 25/10/2026.

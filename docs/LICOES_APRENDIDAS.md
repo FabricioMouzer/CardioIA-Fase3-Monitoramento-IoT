@@ -51,3 +51,14 @@ A baixa acurácia da Árvore de Decisão mostrou que apresentar uma alternativa 
 ## Definição de pronto
 
 Uma etapa está pronta somente quando funciona, é reproduzível, está documentada, possui evidências acessíveis e não contém contradições.
+
+## Lições confirmadas na Etapa 4
+
+- `publish()` retornar verdadeiro comprova apenas aceitação local; o recebimento
+  deve ser demonstrado por um assinante MQTT independente;
+- transferência de código pode alterar escapes; toda versão publicada deve ser
+  recompilada no ambiente de destino;
+- status retido, alerta e telemetria precisam ser conferidos separadamente;
+- uma reconexão só está concluída quando o FIFO chega a zero e o assinante
+  externo recebe as amostras pendentes;
+- o broker público serve somente para dados sintéticos e testes educacionais.

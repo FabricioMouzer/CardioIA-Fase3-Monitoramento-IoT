@@ -1,0 +1,23 @@
+EVIDÊNCIA E4-08 — PORTÃO AUTOMATIZADO DA ETAPA 4
+
+Data UTC: 25/10/2026
+
+Comandos executados:
+- python tests/validate_stage4_evidence.py
+- python -m unittest tests/test_stage4_structure.py tests/test_stage3_structure.py tests/test_stage2_structure.py
+- python tests/run_stage4_payload_logic.py
+- python tests/run_stage3_buffer_logic.py
+- python tests/run_stage2_alert_logic.py
+- python tests/validate_stage1.py
+- python -m json.tool wokwi/diagram.json
+
+Resultados finais:
+- 20 verificações de evidência MQTT aprovadas;
+- 20 testes estruturais/regressivos aprovados;
+- 13 campos do payload MQTT aprovados;
+- 23 verificações FIFO C++ aprovadas;
+- 8 cenários de alerta C++ aprovados;
+- Etapa 1, três tópicos, contrato JSON e revisão do grupo aprovados;
+- diagram.json válido.
+
+Conclusão: T4-01 a T4-13 aprovados, sem pendência crítica.

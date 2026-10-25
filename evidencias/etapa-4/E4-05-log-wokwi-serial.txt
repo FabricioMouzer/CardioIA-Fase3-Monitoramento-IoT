@@ -1,0 +1,122 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+BOOT CardioIA Fase 3 Etapa 4 — MQTT sintético
+MQTT_TOPICS telemetry=cardioia/fase3/rm566777/cardioia-esp32-01/telemetria alert=cardioia/fase3/rm566777/cardioia-esp32-01/alerta status=cardioia/fase3/rm566777/cardioia-esp32-01/status
+SAMPLE seq=1 uptime_ms=1718 temp=-999.0C humidity=-1.0% bpm=110 sensor_valid=false alert_code=8 alert=sensor_error
+BUFFER_STORE seq=1 reason=mqtt_offline pending=1 capacity=2160 dropped_samples=0 overwritten=false
+WIFI_RECONNECT attempt=true
+MQTT_CONNECT host=broker.hivemq.com port=1883
+MQTT_CONNECT_RESULT connected=true state=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+SYNC_START pending=1 dropped_samples=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+MQTT_PUBLISH seq=1 source=buffered telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":1,"captured_uptime_ms":1718,"temperature_c":-999.0,"humidity_pct":-1.0,"bpm":110,"sensor_valid":false,"alert_code":8,"alert":"sensor_error","source":"buffered","buffer_pending":0,"dropped_samples":0}
+SYNC_DONE sent=1 pending=0 dropped_samples=0
+MQTT_STATUS state=online retained=true accepted=true pending=0
+SAMPLE seq=2 uptime_ms=7315 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=2 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":2,"captured_uptime_ms":7315,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=3 uptime_ms=12316 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=3 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":3,"captured_uptime_ms":12316,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=4 uptime_ms=17320 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=4 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":4,"captured_uptime_ms":17320,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=5 uptime_ms=22326 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=5 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":5,"captured_uptime_ms":22326,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=6 uptime_ms=27329 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=6 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":6,"captured_uptime_ms":27329,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=7 uptime_ms=32333 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=7 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":7,"captured_uptime_ms":32333,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=8 uptime_ms=37337 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=8 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":8,"captured_uptime_ms":37337,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=9 uptime_ms=42344 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=9 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":9,"captured_uptime_ms":42344,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=10 uptime_ms=47348 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=10 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":10,"captured_uptime_ms":47348,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=11 uptime_ms=52352 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=11 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":11,"captured_uptime_ms":52352,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=12 uptime_ms=57359 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=12 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":12,"captured_uptime_ms":57359,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=13 uptime_ms=62363 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=13 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":13,"captured_uptime_ms":62363,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=14 uptime_ms=67367 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=14 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":14,"captured_uptime_ms":67367,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=15 uptime_ms=72374 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=15 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":15,"captured_uptime_ms":72374,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=16 uptime_ms=77378 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=16 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":16,"captured_uptime_ms":77378,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=17 uptime_ms=82382 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=17 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":17,"captured_uptime_ms":82382,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=18 uptime_ms=87389 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=18 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":18,"captured_uptime_ms":87389,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=19 uptime_ms=92392 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=19 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":19,"captured_uptime_ms":92392,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=20 uptime_ms=97397 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=20 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":20,"captured_uptime_ms":97397,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=21 uptime_ms=102405 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=21 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":21,"captured_uptime_ms":102405,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=22 uptime_ms=107411 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=22 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":22,"captured_uptime_ms":107411,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=23 uptime_ms=112417 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=23 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":23,"captured_uptime_ms":112417,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=24 uptime_ms=117426 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=24 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":24,"captured_uptime_ms":117426,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=25 uptime_ms=122432 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=25 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":25,"captured_uptime_ms":122432,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=26 uptime_ms=127438 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=26 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":26,"captured_uptime_ms":127438,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=27 uptime_ms=132447 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=27 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":27,"captured_uptime_ms":132447,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=28 uptime_ms=137453 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=28 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":28,"captured_uptime_ms":137453,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=29 uptime_ms=142459 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=29 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":29,"captured_uptime_ms":142459,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=30 uptime_ms=147468 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=30 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":30,"captured_uptime_ms":147468,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=31 uptime_ms=152474 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=31 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":31,"captured_uptime_ms":152474,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+CONNECTIVITY state=disabled source=serial pending=0
+SAMPLE seq=32 uptime_ms=157483 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+BUFFER_STORE seq=32 reason=network_disabled pending=1 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=33 uptime_ms=162492 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+BUFFER_STORE seq=33 reason=network_disabled pending=2 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=34 uptime_ms=167501 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+BUFFER_STORE seq=34 reason=network_disabled pending=3 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=35 uptime_ms=172510 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+BUFFER_STORE seq=35 reason=network_disabled pending=4 capacity=2160 dropped_samples=0 overwritten=false
+CONNECTIVITY state=enabled source=serial pending=4
+MQTT_CONNECT host=broker.hivemq.com port=1883
+MQTT_CONNECT_RESULT connected=true state=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=4
+SYNC_START pending=4 dropped_samples=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=4
+MQTT_PUBLISH seq=32 source=buffered telemetry=true alert=true accepted=true pending_after=3 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":32,"captured_uptime_ms":157483,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"buffered","buffer_pending":3,"dropped_samples":0}
+MQTT_PUBLISH seq=33 source=buffered telemetry=true alert=true accepted=true pending_after=2 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":33,"captured_uptime_ms":162492,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"buffered","buffer_pending":2,"dropped_samples":0}
+MQTT_PUBLISH seq=34 source=buffered telemetry=true alert=true accepted=true pending_after=1 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":34,"captured_uptime_ms":167501,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"buffered","buffer_pending":1,"dropped_samples":0}
+MQTT_PUBLISH seq=35 source=buffered telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":35,"captured_uptime_ms":172510,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"buffered","buffer_pending":0,"dropped_samples":0}
+SYNC_DONE sent=4 pending=0 dropped_samples=0
+MQTT_STATUS state=online retained=true accepted=true pending=0
+SAMPLE seq=36 uptime_ms=177518 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=36 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":36,"captured_uptime_ms":177518,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=37 uptime_ms=182524 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=37 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":37,"captured_uptime_ms":182524,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=38 uptime_ms=187530 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=38 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":38,"captured_uptime_ms":187530,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=39 uptime_ms=192539 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=39 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":39,"captured_uptime_ms":192539,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=40 uptime_ms=197545 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=40 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":40,"captured_uptime_ms":197545,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=41 uptime_ms=202551 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=41 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":41,"captured_uptime_ms":202551,"temperature_c":36.5,"humidity_pct":55.0,"bpm":180,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=42 uptime_ms=207560 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=42 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":42,"captured_uptime_ms":207560,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=43 uptime_ms=212564 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=43 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":43,"captured_uptime_ms":212564,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+CONNECTIVITY state=disabled source=serial pending=0
