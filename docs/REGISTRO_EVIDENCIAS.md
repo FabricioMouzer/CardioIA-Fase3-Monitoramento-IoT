@@ -64,6 +64,7 @@
 | E-703 | 7 | Relatório Parte 2 | `docs/RELATORIO_MQTT_DASHBOARD.md` e `docs/relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf` | 25/10/2026 | Codex | Cinco páginas; aprovado tecnicamente |
 | E-704 | 7 | PowerPoint profissional e revisão visual | `docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx` e `evidencias/etapa-7/E7-02-validacao-documental.txt` | 25/10/2026 | Codex | 12 slides; aprovado tecnicamente |
 | E-705 | 7 | Pacote de revisão dos integrantes | `docs/ETAPA_7_REVISAO_GRUPO.md` | 25/10/2026 | Equipe | Aguardando quatro aprovações |
+| E-706 | 7 | Acesso público aos seis destinos | `evidencias/etapa-7/E7-03-links-publicos.txt` | 25/10/2026 | Codex | HTTP 200 sem cookies |
 
 ## Padrão de nomes
 

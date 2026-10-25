@@ -8,7 +8,7 @@
 - [x] **T7-06 — PowerPoint:** 12 slides editáveis com evidências incorporadas.
 - [x] **T7-07 — Revisão visual:** slides e nove páginas de PDF revisados integralmente.
 - [x] **T7-08 — Links internos:** todos os caminhos relativos abrem corretamente.
-- [ ] **T7-09 — Links públicos:** GitHub, Wokwi e dashboard abrem sem login.
+- [x] **T7-09 — Links públicos:** GitHub, PDFs, PowerPoint, Wokwi e dashboard retornaram HTTP 200 sem cookies.
 - [x] **T7-10 — Vídeo:** não aplicável ao escopo obrigatório; justificativa registrada.
 - [x] **T7-11 — Consistência:** nenhum estado declarado diverge das evidências.
 - [x] **T7-12 — Regressão:** Etapas 1–6 permanecem aprovadas.
@@ -19,4 +19,4 @@
 
 ## Estado do portão
 
-**ABERTO — AGUARDANDO PUBLICAÇÃO E REVISÃO DO GRUPO.** A Etapa 8 permanece bloqueada.
+**ABERTO — AGUARDANDO REVISÃO DO GRUPO.** A Etapa 8 permanece bloqueada.

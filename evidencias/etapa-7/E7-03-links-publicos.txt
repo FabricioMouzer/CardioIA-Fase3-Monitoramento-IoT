@@ -1,0 +1,14 @@
+CardioIA — Etapa 7 — teste de acesso público
+Data: 25/10/2026
+Método: requisições HTTP sem cookies de sessão, seguindo redirecionamentos.
+
+200 https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT
+200 https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT/blob/main/docs/relatorios/CardioIA_Parte_1_Edge_Computing.pdf
+200 https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT/blob/main/docs/relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf
+200 https://github.com/FabricioMouzer/CardioIA-Fase3-Monitoramento-IoT/blob/main/docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx
+200 https://wokwi.com/projects/478851580032675841
+200 https://cardioia-fase3-dashboard.onrender.com/dashboard/monitoramento
+
+Resultado: seis acessos públicos aprovados. A publicação deixou de ser
+pendência. A Etapa 7 aguarda somente a revisão dos quatro integrantes e o
+tratamento de eventuais correções.

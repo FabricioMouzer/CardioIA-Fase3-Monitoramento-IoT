@@ -49,10 +49,9 @@ verificações do FIFO, oito cenários de alerta e validação documental da Eta
 
 ## Pendências para encerramento
 
-1. publicar o pacote na branch `main` e testar os novos links sem autenticação;
-2. receber a revisão dos quatro integrantes;
-3. resolver eventuais correções;
-4. registrar a aprovação coletiva.
+1. receber a revisão dos quatro integrantes;
+2. resolver eventuais correções;
+3. registrar a aprovação coletiva.
 
 Enquanto esses itens não forem concluídos, a Etapa 7 não receberá a mensagem de
 encerramento e a Etapa 8 continuará bloqueada.
