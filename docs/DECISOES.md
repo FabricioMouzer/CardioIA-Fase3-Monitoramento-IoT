@@ -153,3 +153,13 @@
 - **Correlação:** usar `sequence`, `source`, `buffer_pending`,
   `dropped_samples`, estado do dispositivo e alerta exibido.
 - **Estado:** aprovada para execução em 25/10/2026.
+
+## D-022 — Evidência integrada em duas execuções
+
+- **Decisão:** aceitar somente execuções completas reiniciadas e correlacionar
+  log, captura e dashboard principalmente pelo campo `sequence`.
+- **Motivo:** horários visuais podem variar entre interfaces; a sequência é
+  transportada no payload e preserva a identidade da amostra ponta a ponta.
+- **Tratamento de falha:** tentativas preliminares incompletas não compõem a
+  evidência; falhas observadas permanecem registradas com sua correção.
+- **Estado:** validada e encerrada na Etapa 6 em 25/10/2026.

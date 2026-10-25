@@ -62,3 +62,16 @@ Uma etapa está pronta somente quando funciona, é reproduzível, está document
 - uma reconexão só está concluída quando o FIFO chega a zero e o assinante
   externo recebe as amostras pendentes;
 - o broker público serve somente para dados sintéticos e testes educacionais.
+
+## Lições confirmadas na Etapa 6
+
+- reiniciar o simulador e observar `sequence=1` é a evidência objetiva de uma
+  nova execução independente;
+- a sequência do payload é um correlator mais confiável que o horário visual;
+- uma leitura inválida do DHT22 na inicialização deve ser preservada no log e
+  seguida de comprovação explícita de recuperação;
+- testar exatamente 50 BPM, 120 BPM e 38,0 °C evita ambiguidade nas fronteiras;
+- uma sincronização somente termina quando a ordem é preservada, a fila chega a
+  zero, o fluxo `live` retorna e `dropped_samples` permanece zero;
+- desempenho insuficiente do simulador invalida a tentativa, não o requisito:
+  a execução deve ser reiniciada em ambiente estável e documentada novamente.

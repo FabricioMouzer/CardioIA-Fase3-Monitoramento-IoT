@@ -2,7 +2,7 @@
 
 Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 do projeto CardioIA.
 
-> Estado atual: **Etapas 0 a 5 confirmadas e finalizadas. Etapa 6 em execução desde 25/10/2026.**
+> Estado atual: **Etapas 0 a 6 confirmadas e finalizadas. Etapa 7 liberada, mas não iniciada.**
 
 - [Abrir o projeto público no Wokwi](https://wokwi.com/projects/478845707855731713)
 - [Consultar a conclusão e o índice da Etapa 2](docs/ETAPA_2_CONCLUSAO.md)
@@ -14,6 +14,8 @@ Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 d
 - [Abrir o dashboard público](https://cardioia-fase3-dashboard.onrender.com/dashboard/monitoramento)
 - [Consultar a validação da Etapa 5](docs/ETAPA_5_VALIDACAO.md)
 - [Consultar a conclusão da Etapa 5](docs/ETAPA_5_CONCLUSAO.md)
+- [Consultar a validação integrada da Etapa 6](docs/ETAPA_6_VALIDACAO.md)
+- [Consultar a conclusão da Etapa 6](docs/ETAPA_6_CONCLUSAO.md)
 
 ## Regra principal do projeto
 
@@ -48,8 +50,8 @@ Os e-mails dos integrantes não serão publicados no repositório.
 | 3 | Resiliência offline no Edge | Confirmada e finalizada em 25/10/2026; T3-01 a T3-13 aprovados |
 | 4 | MQTT e broker | Confirmada e finalizada em 25/10/2026; T4-01 a T4-13 aprovados |
 | 5 | Dashboard e alertas no Node-RED | Confirmada e finalizada em 25/10/2026; T5-01 a T5-16 aprovados |
-| 6 | Teste integrado e evidências | Em execução desde 25/10/2026 |
-| 7 | Relatórios, vídeo e revisão do grupo | Bloqueada |
+| 6 | Teste integrado e evidências | Confirmada e finalizada em 25/10/2026; T6-01 a T6-16 aprovados |
+| 7 | Relatórios, vídeo e revisão do grupo | Liberada; não iniciada |
 | 8 | Auditoria final e entrega | Bloqueada |
 
 Consulte [o plano de etapas](docs/PLANO_ETAPAS.md), [os critérios de validação](docs/CRITERIOS_VALIDACAO.md) e [as lições aprendidas](docs/LICOES_APRENDIDAS.md).

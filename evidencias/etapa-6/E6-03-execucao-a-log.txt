@@ -1,0 +1,293 @@
+Browser tab: 8, Title: "CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem - Wokwi ESP32, STM32, Arduino Simulator", URL: "https://wokwi.com/projects/478851580032675841".
+0 AXWebArea CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem - Wokwi ESP32, STM32, Arduino Simulator, URL: wokwi.com/projects/478851580032675841
+	1 container
+		2 container
+			3 link wokwi.com/
+			4 button (disabled) SAVE
+			5 button
+			6 button SHARE
+			7 button Like this project
+			8 text CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem
+			9 button
+			10 link Description: Docs, Value: docs.wokwi.com/?utm_source=wokwi
+			11 button toggle dark mode
+			50 button Fabricio Mouzer
+				51 image Fabricio Mouzer
+		15 container
+			16 container
+				17 button sketch.ino
+				18 button diagram.json
+				19 button alert_logic.h
+				20 button libraries.txt
+				21 button edge_buffer.h
+				22 button mqtt_payload.h
+				23 button Library Manager
+				24 button
+				52 container
+					53 editor (settable) Description: Editor content;Press Alt+F1 for Accessibility Options., Value: #include <Arduino.h>
+#include <DHTesp.h>
+#include <PubSubClient.h>
+#include <WiFi.h>
+
+#include "alert_logic.h"
+#include "edge_buffer.h"
+#include "mqtt_payload.h"
+
+// CardioIA Fase 3 — Etapa 4. Dados exclusivamente sintéticos.
+
+			26 container
+				27 button Simulation
+				28 container
+					29 button Restart the simulation
+					88 button Stop the simulation
+					89 button Pause
+					90 button WiFi: Connected to Wokwi-GUEST (Public IoT Gateway)
+				99 text 01:32.863 99%
+				69 container
+					70 image
+						71 container
+							72 text VIN GND D13 D12 D14 D27 D26 D25 D33 D32 D35 D34 VN VP EN 3V3 GND D15 D2 D4 RX2 TX2 D5 D18 D19 D21 RX0 TX0 D22 D23
+						73 text ESP32
+					74 image
+						75 text DHT22
+					77 container bpm
+						78 slider (settable, integer) 512
+						79 slider 50
+					80 container alertLed
+						81 image
+						82 text ALERTA
+					83 container offlineButton
+						84 button ONLINE / OFFLINE blue pushbutton
+							85 image
+						86 text ONLINE / OFFLINE
+					87 image
+				92 container simple-tabpanel-0
+					93 text ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+BOOT CardioIA Fase 3 Etapa 4 — MQTT sintético
+MQTT_TOPICS telemetry=cardioia/fase3/rm566777/cardioia-esp32-01/telemetria alert=cardioia/fase3/rm566777/cardioia-esp32-01/alerta status=cardioia/fase3/rm566777/cardioia-esp32-01/status
+SAMPLE seq=1 uptime_ms=1718 temp=-999.0C humidity=-1.0% bpm=110 sensor_valid=false alert_code=8 alert=sensor_error
+BUFFER_STORE seq=1 reason=mqtt_offline pending=1 capacity=2160 dropped_samples=0 overwritten=false
+WIFI_RECONNECT attempt=true
+MQTT_CONNECT host=broker.hivemq.com port=1883
+MQTT_CONNECT_RESULT connected=true state=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+SYNC_START pending=1 dropped_samples=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+MQTT_PUBLISH seq=1 source=buffered telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":1,"captured_uptime_ms":1718,"temperature_c":-999.0,"humidity_pct":-1.0,"bpm":110,"sensor_valid":false,"alert_code":8,"alert":"sensor_error","source":"buffered","buffer_pending":0,"dropped_samples":0}
+SYNC_DONE sent=1 pending=0 dropped_samples=0
+MQTT_STATUS state=online retained=true accepted=true pending=0
+SAMPLE seq=2 uptime_ms=9148 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=2 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":2,"captured_uptime_ms":9148,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=3 uptime_ms=14149 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=3 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":3,"captured_uptime_ms":14149,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=4 uptime_ms=19153 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=4 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":4,"captured_uptime_ms":19153,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=5 uptime_ms=24161 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=5 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":5,"captured_uptime_ms":24161,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=6 uptime_ms=29167 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=6 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":6,"captured_uptime_ms":29167,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=7 uptime_ms=34173 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=7 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":7,"captured_uptime_ms":34173,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=8 uptime_ms=39179 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=8 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":8,"captured_uptime_ms":39179,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=9 uptime_ms=44188 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=9 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":9,"captured_uptime_ms":44188,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=10 uptime_ms=49194 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=10 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":10,"captured_uptime_ms":49194,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=11 uptime_ms=54197 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=11 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":11,"captured_uptime_ms":54197,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+CONNECTIVITY state=disabled source=serial pending=0
+SAMPLE seq=12 uptime_ms=59206 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=12 reason=network_disabled pending=1 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=13 uptime_ms=64215 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=13 reason=network_disabled pending=2 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=14 uptime_ms=69224 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=14 reason=network_disabled pending=3 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=15 uptime_ms=74233 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=15 reason=network_disabled pending=4 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=16 uptime_ms=79242 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=16 reason=network_disabled pending=5 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=17 uptime_ms=84251 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=17 reason=network_disabled pending=6 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=18 uptime_ms=89260 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=18 reason=network_disabled pending=7 capacity=2160 dropped_samples=0 overwritten=false
+
+					94 text field (settable)
+					95 button Serial plotter
+					96 button Auto scroll
+					97 button
+					98 button Collapse
+
+The focused UI element is 94 text field (settable)
+
+=== APOS RECONEXAO ===
+Browser tab: 8, Title: "CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem - Wokwi ESP32, STM32, Arduino Simulator", URL: "https://wokwi.com/projects/478851580032675841".
+0 AXWebArea CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem - Wokwi ESP32, STM32, Arduino Simulator, URL: wokwi.com/projects/478851580032675841
+	1 container
+		2 container
+			3 link wokwi.com/
+			4 button (disabled) SAVE
+			5 button
+			6 button SHARE
+			7 button Like this project
+			8 text CardioIA Fase 3 - Etapa 4 - MQTT e Nuvem
+			9 button
+			10 link Description: Docs, Value: docs.wokwi.com/?utm_source=wokwi
+			11 button toggle dark mode
+			50 button Fabricio Mouzer
+				51 image Fabricio Mouzer
+		15 container
+			16 container
+				17 button sketch.ino
+				18 button diagram.json
+				19 button alert_logic.h
+				20 button libraries.txt
+				21 button edge_buffer.h
+				22 button mqtt_payload.h
+				23 button Library Manager
+				24 button
+				52 container
+					53 editor (settable) Description: Editor content;Press Alt+F1 for Accessibility Options., Value: #include <Arduino.h>
+#include <DHTesp.h>
+#include <PubSubClient.h>
+#include <WiFi.h>
+
+#include "alert_logic.h"
+#include "edge_buffer.h"
+#include "mqtt_payload.h"
+
+// CardioIA Fase 3 — Etapa 4. Dados exclusivamente sintéticos.
+
+			26 container
+				27 button Simulation
+				28 container
+					29 button Restart the simulation
+					88 button Stop the simulation
+					89 button Pause
+					90 button WiFi: Connected to Wokwi-GUEST (Public IoT Gateway)
+				99 text 02:03.856 99%
+				69 container
+					70 image
+						71 container
+							72 text VIN GND D13 D12 D14 D27 D26 D25 D33 D32 D35 D34 VN VP EN 3V3 GND D15 D2 D4 RX2 TX2 D5 D18 D19 D21 RX0 TX0 D22 D23
+						73 text ESP32
+					74 image
+						75 text DHT22
+					77 container bpm
+						78 slider (settable, integer) 512
+						79 slider 50
+					80 container alertLed
+						81 image
+						82 text ALERTA
+					83 container offlineButton
+						84 button ONLINE / OFFLINE blue pushbutton
+							85 image
+						86 text ONLINE / OFFLINE
+					87 image
+				92 container simple-tabpanel-0
+					93 text ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+BOOT CardioIA Fase 3 Etapa 4 — MQTT sintético
+MQTT_TOPICS telemetry=cardioia/fase3/rm566777/cardioia-esp32-01/telemetria alert=cardioia/fase3/rm566777/cardioia-esp32-01/alerta status=cardioia/fase3/rm566777/cardioia-esp32-01/status
+SAMPLE seq=1 uptime_ms=1718 temp=-999.0C humidity=-1.0% bpm=110 sensor_valid=false alert_code=8 alert=sensor_error
+BUFFER_STORE seq=1 reason=mqtt_offline pending=1 capacity=2160 dropped_samples=0 overwritten=false
+WIFI_RECONNECT attempt=true
+MQTT_CONNECT host=broker.hivemq.com port=1883
+MQTT_CONNECT_RESULT connected=true state=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+SYNC_START pending=1 dropped_samples=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=1
+MQTT_PUBLISH seq=1 source=buffered telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":1,"captured_uptime_ms":1718,"temperature_c":-999.0,"humidity_pct":-1.0,"bpm":110,"sensor_valid":false,"alert_code":8,"alert":"sensor_error","source":"buffered","buffer_pending":0,"dropped_samples":0}
+SYNC_DONE sent=1 pending=0 dropped_samples=0
+MQTT_STATUS state=online retained=true accepted=true pending=0
+SAMPLE seq=2 uptime_ms=9148 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=2 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":2,"captured_uptime_ms":9148,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=3 uptime_ms=14149 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=3 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":3,"captured_uptime_ms":14149,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=4 uptime_ms=19153 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=4 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":4,"captured_uptime_ms":19153,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=5 uptime_ms=24161 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=5 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":5,"captured_uptime_ms":24161,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=6 uptime_ms=29167 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=6 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":6,"captured_uptime_ms":29167,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=7 uptime_ms=34173 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=7 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":7,"captured_uptime_ms":34173,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=8 uptime_ms=39179 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=8 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":8,"captured_uptime_ms":39179,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=9 uptime_ms=44188 temp=36.5C humidity=55.0% bpm=163 sensor_valid=true alert_code=2 alert=high_bpm
+MQTT_PUBLISH seq=9 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":9,"captured_uptime_ms":44188,"temperature_c":36.5,"humidity_pct":55.0,"bpm":163,"sensor_valid":true,"alert_code":2,"alert":"high_bpm","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=10 uptime_ms=49194 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=10 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":10,"captured_uptime_ms":49194,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=11 uptime_ms=54197 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=11 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":11,"captured_uptime_ms":54197,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+CONNECTIVITY state=disabled source=serial pending=0
+SAMPLE seq=12 uptime_ms=59206 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=12 reason=network_disabled pending=1 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=13 uptime_ms=64215 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=13 reason=network_disabled pending=2 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=14 uptime_ms=69224 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=14 reason=network_disabled pending=3 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=15 uptime_ms=74233 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=15 reason=network_disabled pending=4 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=16 uptime_ms=79242 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=16 reason=network_disabled pending=5 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=17 uptime_ms=84251 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=17 reason=network_disabled pending=6 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=18 uptime_ms=89260 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=18 reason=network_disabled pending=7 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=19 uptime_ms=94269 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=19 reason=network_disabled pending=8 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=20 uptime_ms=99278 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=20 reason=network_disabled pending=9 capacity=2160 dropped_samples=0 overwritten=false
+CONNECTIVITY state=enabled source=serial pending=9
+MQTT_CONNECT host=broker.hivemq.com port=1883
+MQTT_CONNECT_RESULT connected=true state=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=9
+SYNC_START pending=9 dropped_samples=0
+MQTT_STATUS state=online_syncing retained=true accepted=true pending=9
+MQTT_PUBLISH seq=12 source=buffered telemetry=true alert=true accepted=true pending_after=8 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":12,"captured_uptime_ms":59206,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":8,"dropped_samples":0}
+MQTT_PUBLISH seq=13 source=buffered telemetry=true alert=true accepted=true pending_after=7 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":13,"captured_uptime_ms":64215,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":7,"dropped_samples":0}
+MQTT_PUBLISH seq=14 source=buffered telemetry=true alert=true accepted=true pending_after=6 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":14,"captured_uptime_ms":69224,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":6,"dropped_samples":0}
+MQTT_PUBLISH seq=15 source=buffered telemetry=true alert=true accepted=true pending_after=5 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":15,"captured_uptime_ms":74233,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":5,"dropped_samples":0}
+MQTT_PUBLISH seq=16 source=buffered telemetry=true alert=true accepted=true pending_after=4 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":16,"captured_uptime_ms":79242,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":4,"dropped_samples":0}
+MQTT_PUBLISH seq=17 source=buffered telemetry=true alert=true accepted=true pending_after=3 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":17,"captured_uptime_ms":84251,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":3,"dropped_samples":0}
+MQTT_PUBLISH seq=18 source=buffered telemetry=true alert=true accepted=true pending_after=2 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":18,"captured_uptime_ms":89260,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":2,"dropped_samples":0}
+MQTT_PUBLISH seq=19 source=buffered telemetry=true alert=true accepted=true pending_after=1 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":19,"captured_uptime_ms":94269,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":1,"dropped_samples":0}
+MQTT_PUBLISH seq=20 source=buffered telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":20,"captured_uptime_ms":99278,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"buffered","buffer_pending":0,"dropped_samples":0}
+SYNC_DONE sent=9 pending=0 dropped_samples=0
+MQTT_STATUS state=online retained=true accepted=true pending=0
+SAMPLE seq=21 uptime_ms=104286 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=21 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":21,"captured_uptime_ms":104286,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=22 uptime_ms=109290 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=22 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":22,"captured_uptime_ms":109290,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=23 uptime_ms=114294 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=23 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":23,"captured_uptime_ms":114294,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+SAMPLE seq=24 uptime_ms=119300 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+MQTT_PUBLISH seq=24 source=live telemetry=true alert=true accepted=true pending_after=0 payload={"schema_version":1,"device_id":"cardioia-esp32-01","sequence":24,"captured_uptime_ms":119300,"temperature_c":36.5,"humidity_pct":55.0,"bpm":110,"sensor_valid":true,"alert_code":0,"alert":"normal","source":"live","buffer_pending":0,"dropped_samples":0}
+
+					94 text field (settable)
+					95 button Serial plotter
+					96 button Auto scroll
+					97 button
+					98 button Collapse
+
+The focused UI element is 94 text field (settable)

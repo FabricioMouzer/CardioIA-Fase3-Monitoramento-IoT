@@ -52,6 +52,13 @@
 | E-508 | 5 | Regressão das Etapas 1–4 e disponibilidade final | `evidencias/etapa-5/E5-08-regressao-final.txt` | 25/10/2026 | Codex | Aprovado |
 | E-509 | 5 | Encerramento formal | `docs/ETAPA_5_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 | E-601 | 6 | Autorização, escopo e pré-condições | `docs/ETAPA_6_BLUEPRINT.md`, `docs/ETAPA_6_PLANO_TESTES.md` e `evidencias/etapa-6/E6-01-inicio-e-precondicoes.txt` | 25/10/2026 | Fabrício / Codex | Etapa em execução |
+| E-602 | 6 | Execução A: BPM alto no dashboard | `evidencias/etapa-6/E6-02-execucao-a-bpm-alto.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-603 | 6 | Execução A: log, Wokwi, offline e sincronização | `evidencias/etapa-6/E6-03-execucao-a-log.txt`, `E6-04-execucao-a-wokwi.jpg` e `E6-05-execucao-a-sincronizada.jpg` | 25/10/2026 | Codex | 9 armazenadas, 9 sincronizadas, fila 0 |
+| E-604 | 6 | Execução B: BPM baixo no dashboard | `evidencias/etapa-6/E6-06-execucao-b-bpm-baixo.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-605 | 6 | Execução B: falha explícita do DHT22 | `evidencias/etapa-6/E6-07-execucao-b-falha-dht.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-606 | 6 | Execução B: log, limites, recuperação e estado final | `evidencias/etapa-6/E6-08-execucao-b-log.txt`, `E6-09-execucao-b-wokwi.jpg` e `E6-10-execucao-b-final-normal.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-607 | 6 | Validação automatizada e regressão das Etapas 1–5 | `evidencias/etapa-6/E6-11-validacao-automatizada.txt` | 25/10/2026 | Codex | Aprovado |
+| E-608 | 6 | Encerramento formal | `docs/ETAPA_6_CONCLUSAO.md` | 25/10/2026 | Codex | T6-01 a T6-16 aprovados |
 
 ## Padrão de nomes
 

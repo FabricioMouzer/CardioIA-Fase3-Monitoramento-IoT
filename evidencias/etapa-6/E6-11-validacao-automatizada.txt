@@ -1,0 +1,36 @@
+CardioIA — Etapa 6 — validação automatizada e regressão
+Data: 25/10/2026
+
+RESULTADOS
+Etapa 6: 38 verificações de evidência integrada aprovadas.
+Etapa 5: 29 verificações estruturais e lógicas aprovadas.
+Etapa 4: 20 verificações de evidência MQTT aprovadas.
+Estrutura das Etapas 2–4: 20 testes aprovados.
+Payload MQTT: 13 campos de telemetria e status JSON aprovados.
+Lógica FIFO C++: 23 verificações aprovadas.
+Lógica C++: 8 cenários de alerta aprovados.
+Etapa 1: documentos, 3 tópicos, contrato JSON e revisão do grupo validados.
+Dashboard público: HTTP 200.
+Raiz administrativa pública: HTTP 404.
+Consistência do estado atual: aprovada.
+git diff --check: aprovado.
+
+NOTA SOBRE A AUDITORIA TEXTUAL
+As frases “Etapa 6 não iniciada” existentes nos documentos de conclusão da
+Etapa 5 descrevem corretamente o estado histórico daquele portão. A verificação
+de consistência vigente foi aplicada ao README e aos documentos da Etapa 6.
+
+HASHES SHA-256
+9ab56bdb8385d730d8ac344eb813078b8a1c9ee020f308c95426f9b4b9f249a4  E6-02-execucao-a-bpm-alto.jpg
+ceae9fa55bd8912f8df6e2dc44084e7df6e863e215d9bbeca84601e2070401c2  E6-03-execucao-a-log.txt
+19e5a890472399020bbe2f1e3b529faffd40e9279bebe448045dab2e826492f1  E6-04-execucao-a-wokwi.jpg
+3eab4a67fb921a2465a4960131ceaf6f491c9cd2e5495183dc7d5540370871e4  E6-05-execucao-a-sincronizada.jpg
+a07413c6c3ddb37413dbb1cfd3b0793b981d11fa99290af6f4e9b3fc6e0519ce  E6-06-execucao-b-bpm-baixo.jpg
+98a434d397537b1c9d0daf0a7ee30fc55d3bc4ac34660ae432d8638244e17683  E6-07-execucao-b-falha-dht.jpg
+092c304b341f35c1b7fbc4323d3955b5977e67027e84a6d1eda77ec32b57b698  E6-08-execucao-b-log.txt
+5f446f129d3179fc6d0451526a3482ea9034ac1cd13a5a379d623512ff582829  E6-09-execucao-b-wokwi.jpg
+d0465416dad401bc317d7fd17e7ccb83dfa275e1c95b3142978daa84f1d8bd49  E6-10-execucao-b-final-normal.jpg
+
+PARECER
+Todos os testes e critérios T6-01 a T6-16 foram aprovados. Nenhuma pendência
+crítica foi identificada. A Etapa 7 está liberada, mas não foi iniciada.
