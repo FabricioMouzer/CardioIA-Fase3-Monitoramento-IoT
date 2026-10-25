@@ -32,6 +32,9 @@ int main() {
   assert(buffer.size() == 3);
   assert(buffer.dropped() == 1);
 
+  assert(buffer.front(sample) && sample.sequence == 2);
+  assert(buffer.size() == 3);
+
   assert(buffer.pop(sample) && sample.sequence == 2);
   assert(buffer.pop(sample) && sample.sequence == 3);
   assert(buffer.pop(sample) && sample.sequence == 4);
@@ -39,7 +42,11 @@ int main() {
   assert(!buffer.pop(sample));
 
   assert(!buffer.push({5}));
-  assert(buffer.pop(sample) && sample.sequence == 5);
+  assert(buffer.front(sample) && sample.sequence == 5);
+  assert(buffer.discardFront());
+  assert(buffer.empty());
+  assert(!buffer.discardFront());
+
   assert(buffer.dropped() == 1);
   return 0;
 }
@@ -67,7 +74,7 @@ def main() -> None:
             check=True,
         )
         subprocess.run([str(binary)], check=True)
-    print("Lógica FIFO C++: 18 verificações aprovadas.")
+    print("Lógica FIFO C++: 23 verificações aprovadas.")
 
 
 if __name__ == "__main__":

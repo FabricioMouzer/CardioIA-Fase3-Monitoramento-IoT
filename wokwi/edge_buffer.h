@@ -32,6 +32,19 @@ class EdgeBuffer {
     return true;
   }
 
+  bool front(T& value) const {
+    if (count_ == 0) return false;
+    value = values_[head_];
+    return true;
+  }
+
+  bool discardFront() {
+    if (count_ == 0) return false;
+    head_ = (head_ + 1) % Capacity;
+    --count_;
+    return true;
+  }
+
   size_t size() const { return count_; }
   constexpr size_t capacity() const { return Capacity; }
   unsigned long dropped() const { return dropped_; }

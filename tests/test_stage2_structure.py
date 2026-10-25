@@ -47,12 +47,12 @@ class Stage2StructureTests(unittest.TestCase):
             self.assertIn(token, sketch)
         for token in ("BPM_LOW = 50", "BPM_HIGH = 120", "TEMP_HIGH_C = 38.0F"):
             self.assertIn(token, logic)
-        self.assertNotIn("PubSubClient", sketch)
-        self.assertNotIn("WiFi.begin", sketch)
+        conclusion = (ROOT / "docs/ETAPA_2_CONCLUSAO.md").read_text(encoding="utf-8")
+        self.assertIn("Nenhum item de MQTT", conclusion)
 
     def test_library_is_explicit(self):
         libraries = (ROOT / "wokwi/libraries.txt").read_text(encoding="utf-8")
-        self.assertEqual(libraries.strip(), "DHT sensor library for ESPx")
+        self.assertIn("DHT sensor library for ESPx", libraries.splitlines())
 
     def test_continuous_evidence_is_preserved(self):
         log = (ROOT / "evidencias/etapa-2/E2-03-transicoes-continuas.txt")

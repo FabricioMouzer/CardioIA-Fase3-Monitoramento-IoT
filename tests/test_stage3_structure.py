@@ -38,10 +38,10 @@ class Stage3StructureTests(unittest.TestCase):
             "CONNECTIVITY state=%s",
             "BUFFER_STORE seq=%lu",
             "SYNC_START pending=%u",
-            "CLOUD_SEND seq=%lu",
+            "MQTT_PUBLISH seq=%lu",
             "SYNC_DONE sent=%u pending=%u",
-            'setConnectivity(false, "serial")',
-            'setConnectivity(true, "serial")',
+            'setNetworkEnabled(false, "serial")',
+            'setNetworkEnabled(true, "serial")',
         ):
             self.assertIn(token, sketch)
 
@@ -53,11 +53,11 @@ class Stage3StructureTests(unittest.TestCase):
         self.assertIn("dropped_samples=%lu", sketch)
         self.assertIn('overwritten ? "true" : "false"', sketch)
 
-    def test_stage4_is_not_started(self):
-        sketch = (ROOT / "wokwi/sketch.ino").read_text(encoding="utf-8")
-        self.assertNotIn("PubSubClient", sketch)
-        self.assertNotIn("WiFi.begin", sketch)
-        self.assertNotIn("broker.hivemq.com", sketch)
+    def test_stage3_scope_was_preserved_in_evidence(self):
+        conclusion = (ROOT / "docs/ETAPA_3_CONCLUSAO.md").read_text(encoding="utf-8")
+        final_gate = (ROOT / "evidencias/etapa-3/E3-07-validacao-final.txt").read_text(encoding="utf-8")
+        self.assertIn("MQTT, credenciais e broker não pertencem à Etapa 3", conclusion)
+        self.assertIn("Etapa 4 tecnicamente liberada, mas não iniciada", final_gate)
 
     def test_gate_is_closed(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

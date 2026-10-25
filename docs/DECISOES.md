@@ -90,3 +90,12 @@
 - **Comportamento:** ao ficar offline, cada leitura entra no FIFO; ao voltar online, as pendências são enviadas em ordem antes das novas leituras.
 - **Limitação:** a conectividade é uma variável booleana e o envio é representado por `Serial.println`/`Serial.printf`, conforme permitido no enunciado. MQTT pertence à Etapa 4.
 - **Estado:** aprovada tecnicamente para execução da Etapa 3.
+
+## D-015 — Implementação MQTT da Etapa 4
+
+- **Decisão:** usar `WiFi.h`, `PubSubClient`, `Wokwi-GUEST` e o broker público `broker.hivemq.com:1883`.
+- **Reconexão:** tentativas com intervalo mínimo de cinco segundos, sem bloquear a coleta.
+- **Entrega:** telemetria e alerta não retidos; status retido e Last Will `offline_unexpected`.
+- **Resiliência:** remover do FIFO somente após `publish()` retornar verdadeiro; sequência permite detectar duplicação.
+- **Segurança:** somente dados sintéticos; nenhuma senha; broker aberto inadequado para produção.
+- **Estado:** aprovada tecnicamente para validação da Etapa 4.

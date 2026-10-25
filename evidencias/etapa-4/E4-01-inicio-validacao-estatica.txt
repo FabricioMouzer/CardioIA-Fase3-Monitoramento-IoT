@@ -1,0 +1,17 @@
+EVIDÊNCIA E4-01 — INÍCIO E VALIDAÇÃO ESTÁTICA DA ETAPA 4
+Data: 25/10/2026
+Responsável: Codex
+
+Escopo preparado:
+- Wi-Fi Wokwi-GUEST;
+- PubSubClient;
+- broker.hivemq.com:1883;
+- três tópicos aprovados com namespace RM566777;
+- JSON versão 1;
+- status retido e Last Will;
+- telemetria/alerta sem retenção;
+- reconexão limitada a cada cinco segundos;
+- FIFO removido somente após publish() aceitar localmente.
+
+Estado: ETAPA EM EXECUÇÃO.
+Esta evidência não comprova compilação, conexão nem recepção independente.
