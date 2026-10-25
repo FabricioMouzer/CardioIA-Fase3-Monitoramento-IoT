@@ -143,3 +143,13 @@
 - **Motivo:** a correção forçada pode introduzir mudanças incompatíveis; o
   protótipo usa apenas dados sintéticos, editor desabilitado e versões fixadas.
 - **Estado:** risco não crítico documentado; reavaliar antes de uso produtivo.
+
+## D-021 — Repetibilidade da Etapa 6
+
+- **Decisão:** executar dois ciclos independentes, reiniciando o simulador entre
+  eles e variando os cenários.
+- **Motivo:** evitar que uma única sequência preparada seja tratada como prova
+  de funcionamento geral e aplicar a lição de generalização da Fase 2.
+- **Correlação:** usar `sequence`, `source`, `buffer_pending`,
+  `dropped_samples`, estado do dispositivo e alerta exibido.
+- **Estado:** aprovada para execução em 25/10/2026.

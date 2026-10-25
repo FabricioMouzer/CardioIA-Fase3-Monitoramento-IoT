@@ -51,6 +51,7 @@
 | E-507 | 5 | Normal, alertas, falha, recuperação e limites | `evidencias/etapa-5/E5-07-cenarios-alerta-limites.txt` | 25/10/2026 | Codex | 10/10 cenários aprovados |
 | E-508 | 5 | Regressão das Etapas 1–4 e disponibilidade final | `evidencias/etapa-5/E5-08-regressao-final.txt` | 25/10/2026 | Codex | Aprovado |
 | E-509 | 5 | Encerramento formal | `docs/ETAPA_5_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
+| E-601 | 6 | Autorização, escopo e pré-condições | `docs/ETAPA_6_BLUEPRINT.md`, `docs/ETAPA_6_PLANO_TESTES.md` e `evidencias/etapa-6/E6-01-inicio-e-precondicoes.txt` | 25/10/2026 | Fabrício / Codex | Etapa em execução |
 
 ## Padrão de nomes
 

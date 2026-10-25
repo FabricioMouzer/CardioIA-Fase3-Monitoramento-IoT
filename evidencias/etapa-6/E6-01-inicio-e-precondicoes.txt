@@ -1,0 +1,25 @@
+CARDIOIA — ETAPA 6 — INÍCIO E PRÉ-CONDIÇÕES
+Data: 25/10/2026
+Responsável: Fabrício Mouzer Brito / execução assistida pelo Codex
+
+Autorização recebida:
+"confirmo o início da etapa 6"
+
+Pré-condições verificadas:
+- Etapas 0 a 5 confirmadas e finalizadas.
+- Repositório público e separado dos trabalhos anteriores.
+- Wokwi público disponível.
+- Broker HiveMQ previamente validado por assinante independente.
+- Node-RED no Render disponível em /dashboard/monitoramento.
+- Dashboard respondeu HTTP 200 antes do início.
+- Editor administrativo permaneceu desabilitado.
+- Somente dados sintéticos serão utilizados.
+
+Método selecionado:
+- duas execuções independentes;
+- sequências de entrada diferentes;
+- correlação por sequence, estado, origem, fila e descartes;
+- preservação de capturas e logs;
+- regressão completa antes do fechamento.
+
+Resultado: PRÉ-CONDIÇÕES APROVADAS. ETAPA 6 EM EXECUÇÃO.
