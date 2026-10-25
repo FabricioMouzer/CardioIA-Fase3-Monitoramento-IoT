@@ -36,7 +36,7 @@ páginas, conteúdo técnico, anotações de links nos PDFs, 12 slides, imagens
 incorporadas, cinco hyperlinks e referências no README.
 
 A regressão preservou os resultados das Etapas 1–6: 38 verificações integradas,
-30 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
+32 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
 verificações do FIFO, oito cenários de alerta e validação documental da Etapa 1.
 
 ## Correção durante a revisão
@@ -53,6 +53,9 @@ logs e a validação estão em
 O commit `d309109` foi implantado no Render e o reteste público mostrou
 sequência `#3`, origem `live`, fila e descartes zerados, 110 BPM no gráfico e o
 dispositivo como `online (telemetria ativa)`.
+Para impedir nova interpretação equivocada, a apresentação do Last Will também
+foi traduzida para `offline — inicie o Wokwi`, mantendo
+`offline_unexpected` inalterado no contrato MQTT.
 
 ## Hashes SHA-256
 

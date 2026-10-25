@@ -29,12 +29,15 @@ Correção aplicada
 - O processador de telemetria passou a produzir oito saídas.
 - Toda telemetria válida reafirma no cartão "Dispositivo":
   "online (telemetria ativa) | fila: N | descartes: N".
+- O valor técnico "offline_unexpected" passou a ser apresentado no painel como
+  "offline — inicie o Wokwi", evitando que o usuário confunda o Last Will com
+  uma falha do site.
 - O tópico de status e o Last Will foram preservados. Quando não houver mais
   telemetria, o Last Will continua capaz de sinalizar a desconexão.
 - Contratos inválidos permanecem isolados na saída de rejeições.
 
 Validação local
-- tests/validate_stage5_flow.js: 30 verificações aprovadas.
+- tests/validate_stage5_flow.js: 32 verificações aprovadas.
 - tests/validate_stage6_evidence.py: 38 verificações aprovadas.
 - tests/validate_stage7_artifacts.py: 19 verificações aprovadas.
 - git diff --check: aprovado.

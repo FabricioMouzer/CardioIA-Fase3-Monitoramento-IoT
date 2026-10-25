@@ -38,6 +38,13 @@ ok(!broker.credentials && !broker.user && !broker.password, 'Credencial não per
 const processor = nodes('function').find((node) => node.name === 'Validar e distribuir telemetria')
 ok(processor && processor.outputs === 8, 'Processador de telemetria inválido')
 const execute = vm.runInNewContext(`(function (msg) { ${processor.func} })`)
+const statusFormatter = nodes('function').find((node) => node.name === 'Formatar status do dispositivo')
+ok(statusFormatter, 'Formatador de status ausente')
+const executeStatus = vm.runInNewContext(`(function (msg) { ${statusFormatter.func} })`)
+const offlineStatus = executeStatus({ payload: { schema_version: 1, state: 'offline_unexpected', buffer_pending: 1, dropped_samples: 0 } })
+ok(offlineStatus.payload === 'offline — inicie o Wokwi | fila: 1 | descartes: 0' &&
+   offlineStatus.ui_update.color === '#b42318',
+   'Status offline não está claro para o usuário')
 const injects = Object.fromEntries(nodes('inject').map((node) => [node.name, JSON.parse(node.payload)]))
 
 function processCase (name) {

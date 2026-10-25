@@ -88,7 +88,7 @@
     "type": "function",
     "z": "f5a0000000000001",
     "name": "Formatar status do dispositivo",
-    "func": "let p = msg.payload;\nif (typeof p === 'string') { try { p = JSON.parse(p); } catch (e) { return null; } }\nif (!p || p.schema_version !== 1 || typeof p.state !== 'string') return null;\nconst online = p.state === 'online' || p.state === 'online_syncing';\nmsg.payload = p.state + ' | fila: ' + p.buffer_pending + ' | descartes: ' + p.dropped_samples;\nmsg.ui_update = { color: online ? '#067647' : '#b42318', fontSize: '18px' };\nreturn msg;",
+    "func": "let p = msg.payload;\nif (typeof p === 'string') { try { p = JSON.parse(p); } catch (e) { return null; } }\nif (!p || p.schema_version !== 1 || typeof p.state !== 'string') return null;\nconst online = p.state === 'online' || p.state === 'online_syncing';\nconst labels = { online: 'online', online_syncing: 'online — sincronizando', offline_unexpected: 'offline — inicie o Wokwi' };\nconst displayState = labels[p.state] || p.state;\nmsg.payload = displayState + ' | fila: ' + p.buffer_pending + ' | descartes: ' + p.dropped_samples;\nmsg.ui_update = { color: online ? '#067647' : '#b42318', fontSize: '18px' };\nreturn msg;",
     "outputs": 1,
     "timeout": 0,
     "noerr": 0,
