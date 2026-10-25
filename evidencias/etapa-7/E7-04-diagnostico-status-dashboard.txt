@@ -40,5 +40,16 @@ Validação local
 - git diff --check: aprovado.
 
 Estado
-- Correção aprovada localmente.
-- Publicação e revalidação pública necessárias antes de encerrar a Etapa 7.
+- Commit publicado: d3091099b9130d35922d0cc1ac1c90f53dbbee00.
+- Deploy Render: dep-dbf2see7bikc73c02h8g, estado live.
+- Revalidação pública com Wokwi ativo:
+  - condição: NORMAL;
+  - sequência: #3;
+  - origem: live;
+  - fila: 0;
+  - descartes: 0;
+  - dispositivo: online (telemetria ativa);
+  - temperatura: 36,5 °C;
+  - umidade: 55%;
+  - BPM: 110, visível no gráfico.
+- Resultado: correção aprovada localmente e no ambiente público.

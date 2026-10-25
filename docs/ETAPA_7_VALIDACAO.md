@@ -50,6 +50,9 @@ status antigo, o flow foi corrigido para que toda telemetria válida reafirme
 `online (telemetria ativa)`, sem remover o Last Will. A ocorrência, a causa, os
 logs e a validação estão em
 [`E7-04-diagnostico-status-dashboard.txt`](../evidencias/etapa-7/E7-04-diagnostico-status-dashboard.txt).
+O commit `d309109` foi implantado no Render e o reteste público mostrou
+sequência `#3`, origem `live`, fila e descartes zerados, 110 BPM no gráfico e o
+dispositivo como `online (telemetria ativa)`.
 
 ## Hashes SHA-256
 
