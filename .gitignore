@@ -18,6 +18,7 @@ node-red/flows_cred.json
 node-red/lib/
 
 # Arquivos temporários
+tmp/
 __pycache__/
 *.pyc
 *.log

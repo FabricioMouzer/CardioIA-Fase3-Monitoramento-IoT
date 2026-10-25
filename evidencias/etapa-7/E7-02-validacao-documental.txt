@@ -1,0 +1,32 @@
+CardioIA — Etapa 7 — validação documental
+Data: 25/10/2026
+
+ARTEFATOS
+- Parte 1: PDF A4, 4 páginas, 54.116 bytes.
+- Parte 2: PDF A4, 5 páginas, 56.215 bytes.
+- PowerPoint: 12 slides, 780.241 bytes, 9 imagens e 5 hyperlinks.
+
+TESTES
+Etapa 7: 19 verificações documentais aprovadas.
+Etapa 6: 38 verificações integradas aprovadas.
+Etapa 5: 29 verificações estruturais e lógicas aprovadas.
+Etapa 4: 20 verificações de evidência MQTT aprovadas.
+Estrutura das Etapas 2–4: 20 testes aprovados.
+Payload MQTT: 13 campos e status JSON aprovados.
+FIFO C++: 23 verificações aprovadas.
+Alertas C++: 8 cenários aprovados.
+Etapa 1: documentos, tópicos, contrato e revisão validados.
+
+REVISÃO VISUAL
+- 9/9 páginas de PDF inspecionadas após correção da paginação.
+- 12/12 slides inspecionados após incorporar as imagens e corrigir as setas.
+- nenhum corte, sobreposição, página vazia ou espaço reservado na versão aceita.
+
+HASHES SHA-256
+2bd248d778eb8519c00f1b113e7fe29cba5f380d033e270f3d4708741f51ae4e  CardioIA_Parte_1_Edge_Computing.pdf
+5fd1cdaacaac4139f74921ce3abb57c19312c2298f6befc3232c1abdb97f1f7d  CardioIA_Parte_2_MQTT_Dashboard.pdf
+9b93c0ef6f7319e48661964d6474ce27192f01bda2503bb72371b058ca439eb2  CardioIA_Fase3_Apresentacao_Equipe_v2.pptx
+
+ESTADO
+Preparação técnica aprovada. Etapa 7 permanece aberta para publicação e revisão
+dos quatro integrantes. Etapa 8 bloqueada.

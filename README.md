@@ -2,7 +2,7 @@
 
 Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 do projeto CardioIA.
 
-> Estado atual: **Etapas 0 a 6 confirmadas e finalizadas. Etapa 7 liberada, mas não iniciada.**
+> Estado atual: **Etapas 0 a 6 confirmadas e finalizadas. Etapa 7 em execução desde 25/10/2026.**
 
 - [Abrir o projeto público no Wokwi](https://wokwi.com/projects/478845707855731713)
 - [Consultar a conclusão e o índice da Etapa 2](docs/ETAPA_2_CONCLUSAO.md)
@@ -16,6 +16,82 @@ Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 d
 - [Consultar a conclusão da Etapa 5](docs/ETAPA_5_CONCLUSAO.md)
 - [Consultar a validação integrada da Etapa 6](docs/ETAPA_6_VALIDACAO.md)
 - [Consultar a conclusão da Etapa 6](docs/ETAPA_6_CONCLUSAO.md)
+- [Ler o relatório da Parte 1 — Edge Computing](docs/RELATORIO_EDGE_COMPUTING.md)
+- [Ler o relatório da Parte 2 — MQTT e dashboard](docs/RELATORIO_MQTT_DASHBOARD.md)
+- [Baixar o PDF da Parte 1](docs/relatorios/CardioIA_Parte_1_Edge_Computing.pdf)
+- [Baixar o PDF da Parte 2](docs/relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf)
+- [Baixar a apresentação PowerPoint](docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx)
+- [Abrir o checklist de revisão do grupo](docs/ETAPA_7_REVISAO_GRUPO.md)
+
+## Visão geral
+
+O CardioIA simula um dispositivo vestível de monitoramento contínuo. O ESP32
+coleta temperatura, umidade e BPM sintético, classifica alertas localmente,
+mantém uma fila durante interrupções e envia JSON por MQTT. O Node-RED valida as
+mensagens e apresenta gráfico, gauges, estado e alertas no dashboard público.
+
+```mermaid
+flowchart TD
+    A["DHT22 + BPM sintético"] --> B["ESP32 / Edge"]
+    B --> C["FIFO offline"]
+    C --> D["HiveMQ / Cloud"]
+    D --> E["Node-RED / Fog"]
+    E --> F["Dashboard + alertas"]
+```
+
+## Tecnologias
+
+- ESP32 e C++ no Wokwi;
+- DHT22, potenciômetro, botão e LED virtual;
+- `DHTesp`, `WiFi` e `PubSubClient`;
+- MQTT com HiveMQ público e payload JSON versão 1;
+- Node-RED 5.0.9 e FlowFuse Dashboard 2.0 1.34.0;
+- Render para acesso público ao dashboard;
+- testes Python, C++ e JavaScript.
+
+## Estrutura principal
+
+```text
+wokwi/       firmware, circuito e bibliotecas
+node-red/    flow, runtime e dependências fixadas
+data/        exemplo do contrato de telemetria
+docs/        arquitetura, relatórios, decisões e validações
+evidencias/  capturas e logs organizados por etapa
+tests/       validadores e testes automatizados
+```
+
+## Execução
+
+### ESP32 no Wokwi
+
+Abra o [projeto público](https://wokwi.com/projects/478851580032675841) e
+inicie a simulação. O potenciômetro altera o BPM. O botão azul alterna a
+conectividade simulada. Os comandos seriais `O`, `N`, `F` e `R` permitem testar
+offline, online, falha do DHT22 e recuperação.
+
+### Dashboard local
+
+Com Node.js instalado:
+
+```bash
+cd node-red
+npm ci
+npm start
+```
+
+Editor local: `http://127.0.0.1:1880/`
+
+Dashboard local: `http://127.0.0.1:1880/dashboard/monitoramento`
+
+## Limites didáticos
+
+- normal: 50 a 120 BPM, inclusive;
+- BPM baixo: abaixo de 50;
+- BPM alto: acima de 120;
+- temperatura alta: acima de 38,0 °C;
+- DHT22 inválido: alerta técnico explícito.
+
+Essas regras servem ao protótipo educacional e não constituem orientação médica.
 
 ## Regra principal do projeto
 
@@ -51,7 +127,7 @@ Os e-mails dos integrantes não serão publicados no repositório.
 | 4 | MQTT e broker | Confirmada e finalizada em 25/10/2026; T4-01 a T4-13 aprovados |
 | 5 | Dashboard e alertas no Node-RED | Confirmada e finalizada em 25/10/2026; T5-01 a T5-16 aprovados |
 | 6 | Teste integrado e evidências | Confirmada e finalizada em 25/10/2026; T6-01 a T6-16 aprovados |
-| 7 | Relatórios, vídeo e revisão do grupo | Liberada; não iniciada |
+| 7 | Relatórios, apresentação e revisão do grupo | Em execução desde 25/10/2026 |
 | 8 | Auditoria final e entrega | Bloqueada |
 
 Consulte [o plano de etapas](docs/PLANO_ETAPAS.md), [os critérios de validação](docs/CRITERIOS_VALIDACAO.md) e [as lições aprendidas](docs/LICOES_APRENDIDAS.md).

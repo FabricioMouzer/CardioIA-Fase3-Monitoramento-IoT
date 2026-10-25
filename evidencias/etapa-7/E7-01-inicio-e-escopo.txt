@@ -1,0 +1,25 @@
+CardioIA — Etapa 7 — início controlado
+Data: 25/10/2026
+Responsável pela autorização: Fabrício Mouzer Brito
+
+Autorização recebida: “confirmo o início da etapa 7”.
+
+Pré-condições verificadas:
+- Etapas 0–6 confirmadas e finalizadas;
+- commit remoto da Etapa 6: c11fd947ef85a1ae2b70b19454bb1e243c4b861d;
+- Wokwi público disponível;
+- dashboard público disponível;
+- evidências integradas e regressão aprovadas.
+
+Escopo iniciado:
+- relatórios das Partes 1 e 2;
+- README final;
+- PowerPoint profissional;
+- pacote de revisão dos quatro integrantes.
+
+Vídeo:
+- não exigido na atividade principal;
+- pertence ao desafio opcional “Ir Além 2”;
+- não será declarado concluído sem produção, publicação e teste anônimo.
+
+Estado: Etapa 7 em execução. Etapa 8 bloqueada.

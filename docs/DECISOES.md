@@ -163,3 +163,14 @@
 - **Tratamento de falha:** tentativas preliminares incompletas não compõem a
   evidência; falhas observadas permanecem registradas com sua correção.
 - **Estado:** validada e encerrada na Etapa 6 em 25/10/2026.
+
+## D-023 — Vídeo no escopo da Etapa 7
+
+- **Decisão:** não tratar o vídeo do “Ir Além 2” como requisito da atividade
+  principal da Fase 3.
+- **Motivo:** o enunciado exige vídeo somente no desafio opcional de IA em
+  séries temporais, enquanto a decisão D-010 manteve os opcionais fora do escopo
+  até a conclusão dos cinco critérios obrigatórios.
+- **Controle:** qualquer decisão futura de realizar o desafio opcional exigirá
+  produção, publicação não listada, teste sem login e evidência própria.
+- **Estado:** aprovada para o escopo obrigatório da Etapa 7 em 25/10/2026.

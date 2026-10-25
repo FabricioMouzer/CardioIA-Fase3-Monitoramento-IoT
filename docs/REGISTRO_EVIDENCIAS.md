@@ -59,6 +59,11 @@
 | E-606 | 6 | Execução B: log, limites, recuperação e estado final | `evidencias/etapa-6/E6-08-execucao-b-log.txt`, `E6-09-execucao-b-wokwi.jpg` e `E6-10-execucao-b-final-normal.jpg` | 25/10/2026 | Codex | Aprovado |
 | E-607 | 6 | Validação automatizada e regressão das Etapas 1–5 | `evidencias/etapa-6/E6-11-validacao-automatizada.txt` | 25/10/2026 | Codex | Aprovado |
 | E-608 | 6 | Encerramento formal | `docs/ETAPA_6_CONCLUSAO.md` | 25/10/2026 | Codex | T6-01 a T6-16 aprovados |
+| E-701 | 7 | Autorização, escopo e regra do vídeo | `docs/ETAPA_7_BLUEPRINT.md`, `docs/ETAPA_7_PLANO_TESTES.md` e `evidencias/etapa-7/E7-01-inicio-e-escopo.txt` | 25/10/2026 | Fabrício / Codex | Etapa em execução |
+| E-702 | 7 | Relatório Parte 1 | `docs/RELATORIO_EDGE_COMPUTING.md` e `docs/relatorios/CardioIA_Parte_1_Edge_Computing.pdf` | 25/10/2026 | Codex | Quatro páginas; aprovado tecnicamente |
+| E-703 | 7 | Relatório Parte 2 | `docs/RELATORIO_MQTT_DASHBOARD.md` e `docs/relatorios/CardioIA_Parte_2_MQTT_Dashboard.pdf` | 25/10/2026 | Codex | Cinco páginas; aprovado tecnicamente |
+| E-704 | 7 | PowerPoint profissional e revisão visual | `docs/apresentacao/CardioIA_Fase3_Apresentacao_Equipe_v2.pptx` e `evidencias/etapa-7/E7-02-validacao-documental.txt` | 25/10/2026 | Codex | 12 slides; aprovado tecnicamente |
+| E-705 | 7 | Pacote de revisão dos integrantes | `docs/ETAPA_7_REVISAO_GRUPO.md` | 25/10/2026 | Equipe | Aguardando quatro aprovações |
 
 ## Padrão de nomes
 
