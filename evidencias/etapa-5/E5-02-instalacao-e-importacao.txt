@@ -1,0 +1,27 @@
+EVIDÊNCIA E5-02 — INSTALAÇÃO E IMPORTAÇÃO DO FLOW
+
+Data: 25/10/2026
+Ambiente isolado: Linux, Node.js 24.22.1, npm 11.9.0.
+
+Instalação:
+- 373 pacotes instalados localmente;
+- node-red 5.0.9;
+- @flowfuse/node-red-dashboard 1.34.0;
+- nenhuma instalação global.
+
+Runtime observado:
+- Settings file: node-red/settings.js;
+- Flows file: node-red/flows.json;
+- Server: http://127.0.0.1:1880/;
+- Dashboard 2.0 iniciado em /dashboard;
+- flows iniciados sem mensagem de nó desconhecido.
+
+HTTP local:
+- /dashboard/monitoramento retornou HTML do FlowFuse Dashboard.
+
+Limitação do ambiente:
+- DNS/TCP do executor para broker.hivemq.com:1883 indisponível;
+- o runtime registrou Connection failed to broker;
+- portanto MQTT real no dashboard ainda NÃO está aprovado.
+
+Estado: instalação e importação aprovadas; validação visual e MQTT real pendentes.

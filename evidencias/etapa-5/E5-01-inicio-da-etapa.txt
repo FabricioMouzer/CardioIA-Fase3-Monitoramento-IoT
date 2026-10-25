@@ -1,0 +1,10 @@
+EVIDÊNCIA E5-01 — INÍCIO CONTROLADO DA ETAPA 5
+
+Data: 25/10/2026
+Autorização: usuário confirmou prosseguir após o encerramento da Etapa 4.
+Ambiente observado: Node.js 24.22.1 e npm 11.9.0 disponíveis; Node-RED ausente.
+Decisão: instalar Node-RED 5.0.9 e @flowfuse/node-red-dashboard 1.34.0 em
+diretório exclusivo do repositório, sem instalação global e sem alterar o
+computador pessoal do integrante.
+
+Estado: Etapa 5 iniciada; Etapa 6 bloqueada.

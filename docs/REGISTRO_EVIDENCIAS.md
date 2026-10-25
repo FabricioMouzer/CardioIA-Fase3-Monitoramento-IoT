@@ -42,6 +42,8 @@
 | E-407 | 4 | Link público sem sessão | `evidencias/etapa-4/E4-07-link-publico.txt` | 25/10/2026 | Codex | HTTP 200 e arquivos públicos |
 | E-408 | 4 | Portão automatizado e regressão | `evidencias/etapa-4/E4-08-validacao-automatizada.txt` | 25/10/2026 | Codex | Aprovado |
 | E-409 | 4 | Encerramento formal | `docs/ETAPA_4_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
+| E-501 | 5 | Início controlado e diagnóstico do ambiente | `evidencias/etapa-5/E5-01-inicio-da-etapa.txt` | 25/10/2026 | Codex | Aprovado |
+| E-502 | 5 | Instalação isolada e importação do flow | `evidencias/etapa-5/E5-02-instalacao-e-importacao.txt` | 25/10/2026 | Codex | Aprovado; MQTT real pendente |
 
 ## Padrão de nomes
 

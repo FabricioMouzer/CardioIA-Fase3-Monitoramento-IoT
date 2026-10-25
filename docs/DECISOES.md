@@ -107,3 +107,13 @@
 - **Motivo:** impedir que aceite local seja confundido com entrega ponta a ponta
   e evitar erros de escape observados na primeira compilação.
 - **Estado:** validada e encerrada na Etapa 4 em 25/10/2026.
+
+## D-017 — Runtime isolado do Node-RED
+
+- **Decisão:** instalar Node-RED e Dashboard 2.0 apenas em `node-red/`, com
+  versões fixadas e `node_modules` ignorado pelo Git.
+- **Motivo:** Fabrício não possui Node-RED no computador e a instalação isolada
+  permite validar o flow sem alterar globalmente o sistema de um integrante.
+- **Versões:** Node-RED 5.0.9 e `@flowfuse/node-red-dashboard` 1.34.0.
+- **Estado:** instalação e importação aprovadas; MQTT real e evidência visual
+  continuam pendentes.
