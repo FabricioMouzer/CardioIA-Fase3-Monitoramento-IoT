@@ -14,6 +14,7 @@
 - [x] **T7-12 — Regressão:** Etapas 1–6 permanecem aprovadas.
 - [x] **T7-13 — Pacote de revisão:** mensagem e checklist preparados para o grupo.
 - [x] **T7-13A — Correção do status:** flow publicado e dashboard público comprovado com telemetria ativa, `online`, fila zero e gráfico atualizado.
+- [x] **T7-13B — Auditoria pré-apresentação:** requisitos, regressão, links, dependências, segurança e consistência revisados.
 - [ ] **T7-14 — Revisão da equipe:** quatro integrantes analisaram os materiais.
 - [ ] **T7-15 — Correções da equipe:** solicitações resolvidas ou ausência confirmada.
 - [ ] **T7-16 — Encerramento:** documentos finais e aprovação registrados.

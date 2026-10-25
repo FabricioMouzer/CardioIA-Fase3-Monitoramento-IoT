@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT_1 = ROOT / "docs" / "relatorios" / "CardioIA_Parte_1_Edge_Computing.pdf"
 REPORT_2 = ROOT / "docs" / "relatorios" / "CardioIA_Parte_2_MQTT_Dashboard.pdf"
 PPTX = ROOT / "docs" / "apresentacao" / "CardioIA_Fase3_Apresentacao_Equipe_v2.pptx"
+AUDIT_DOC = ROOT / "docs" / "ETAPA_7_AUDITORIA_PRE_APRESENTACAO.md"
+AUDIT_EVIDENCE = ROOT / "evidencias" / "etapa-7" / "E7-05-auditoria-pre-apresentacao.txt"
 checks = 0
 
 
@@ -33,6 +35,8 @@ def pdf_links(reader: PdfReader) -> set[str]:
 
 for path in [REPORT_1, REPORT_2, PPTX]:
     require(path.exists() and path.stat().st_size > 20_000, f"Artefato ausente ou vazio: {path}")
+for path in [AUDIT_DOC, AUDIT_EVIDENCE]:
+    require(path.exists() and path.stat().st_size > 500, f"Auditoria ausente ou incompleta: {path}")
 
 reader_1 = PdfReader(str(REPORT_1))
 reader_2 = PdfReader(str(REPORT_2))

@@ -43,7 +43,7 @@
 | E-408 | 4 | Portão automatizado e regressão | `evidencias/etapa-4/E4-08-validacao-automatizada.txt` | 25/10/2026 | Codex | Aprovado |
 | E-409 | 4 | Encerramento formal | `docs/ETAPA_4_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 | E-501 | 5 | Início controlado e diagnóstico do ambiente | `evidencias/etapa-5/E5-01-inicio-da-etapa.txt` | 25/10/2026 | Codex | Aprovado |
-| E-502 | 5 | Instalação isolada e importação do flow | `evidencias/etapa-5/E5-02-instalacao-e-importacao.txt` | 25/10/2026 | Codex | Aprovado; MQTT real pendente |
+| E-502 | 5 | Instalação isolada e importação do flow | `evidencias/etapa-5/E5-02-instalacao-e-importacao.txt` | 25/10/2026 | Codex | Validação inicial aprovada; pendência MQTT resolvida em E-506 a E-508 |
 | E-503 | 5 | Dashboard normal, online, gráfico e gauges | `evidencias/etapa-5/E5-03-dashboard-normal-online.jpg` | 25/10/2026 | Codex | Aprovado |
 | E-504 | 5 | Wokwi online e publicação MQTT | `evidencias/etapa-5/E5-04-wokwi-mqtt-online.jpg` | 25/10/2026 | Codex | Aprovado |
 | E-505 | 5 | Implantação pública no Render | `evidencias/etapa-5/E5-05-implantacao-render.txt` | 25/10/2026 | Codex | Live; HTTP 200 |
@@ -51,7 +51,7 @@
 | E-507 | 5 | Normal, alertas, falha, recuperação e limites | `evidencias/etapa-5/E5-07-cenarios-alerta-limites.txt` | 25/10/2026 | Codex | 10/10 cenários aprovados |
 | E-508 | 5 | Regressão das Etapas 1–4 e disponibilidade final | `evidencias/etapa-5/E5-08-regressao-final.txt` | 25/10/2026 | Codex | Aprovado |
 | E-509 | 5 | Encerramento formal | `docs/ETAPA_5_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
-| E-601 | 6 | Autorização, escopo e pré-condições | `docs/ETAPA_6_BLUEPRINT.md`, `docs/ETAPA_6_PLANO_TESTES.md` e `evidencias/etapa-6/E6-01-inicio-e-precondicoes.txt` | 25/10/2026 | Fabrício / Codex | Etapa em execução |
+| E-601 | 6 | Autorização, escopo e pré-condições | `docs/ETAPA_6_BLUEPRINT.md`, `docs/ETAPA_6_PLANO_TESTES.md` e `evidencias/etapa-6/E6-01-inicio-e-precondicoes.txt` | 25/10/2026 | Fabrício / Codex | Início registrado; etapa encerrada em E-608 |
 | E-602 | 6 | Execução A: BPM alto no dashboard | `evidencias/etapa-6/E6-02-execucao-a-bpm-alto.jpg` | 25/10/2026 | Codex | Aprovado |
 | E-603 | 6 | Execução A: log, Wokwi, offline e sincronização | `evidencias/etapa-6/E6-03-execucao-a-log.txt`, `E6-04-execucao-a-wokwi.jpg` e `E6-05-execucao-a-sincronizada.jpg` | 25/10/2026 | Codex | 9 armazenadas, 9 sincronizadas, fila 0 |
 | E-604 | 6 | Execução B: BPM baixo no dashboard | `evidencias/etapa-6/E6-06-execucao-b-bpm-baixo.jpg` | 25/10/2026 | Codex | Aprovado |
@@ -66,6 +66,7 @@
 | E-705 | 7 | Pacote de revisão dos integrantes | `docs/ETAPA_7_REVISAO_GRUPO.md` | 25/10/2026 | Equipe | Aguardando quatro aprovações |
 | E-706 | 7 | Acesso público aos seis destinos | `evidencias/etapa-7/E7-03-links-publicos.txt` | 25/10/2026 | Codex | HTTP 200 sem cookies |
 | E-707 | 7 | Diagnóstico e correção do status retido no dashboard | `evidencias/etapa-7/E7-04-diagnostico-status-dashboard.txt` | 25/10/2026 | Fabrício / Codex | Aprovado localmente e no ambiente público; fila 0 |
+| E-708 | 7 | Auditoria pré-apresentação | `docs/ETAPA_7_AUDITORIA_PRE_APRESENTACAO.md` e `evidencias/etapa-7/E7-05-auditoria-pre-apresentacao.txt` | 25/10/2026 | Codex | Núcleo aprovado; pendências administrativas identificadas |
 
 ## Padrão de nomes
 

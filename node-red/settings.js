@@ -13,6 +13,13 @@ module.exports = {
     tours: false
   },
   functionExternalModules: false,
+  externalModules: {
+    autoInstall: false,
+    palette: {
+      allowInstall: false,
+      allowUpload: false
+    }
+  },
   exportGlobalContextKeys: false,
   logging: {
     console: { level: "info", metrics: false, audit: false }

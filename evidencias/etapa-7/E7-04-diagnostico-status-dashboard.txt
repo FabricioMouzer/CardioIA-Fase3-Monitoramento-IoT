@@ -37,9 +37,9 @@ Correção aplicada
 - Contratos inválidos permanecem isolados na saída de rejeições.
 
 Validação local
-- tests/validate_stage5_flow.js: 32 verificações aprovadas.
+- tests/validate_stage5_flow.js: 35 verificações aprovadas após a auditoria.
 - tests/validate_stage6_evidence.py: 38 verificações aprovadas.
-- tests/validate_stage7_artifacts.py: 19 verificações aprovadas.
+- tests/validate_stage7_artifacts.py: 21 verificações aprovadas após a auditoria.
 - git diff --check: aprovado.
 
 Estado

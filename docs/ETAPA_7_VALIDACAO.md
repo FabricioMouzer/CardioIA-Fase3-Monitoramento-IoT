@@ -31,12 +31,12 @@ imagens no arquivo, corrige o fluxo e ajusta o slide do dashboard.
 ## Validação automatizada
 
 O script [`tests/validate_stage7_artifacts.py`](../tests/validate_stage7_artifacts.py)
-aprovou 19 verificações, incluindo existência e tamanho dos arquivos, número de
+aprovou 21 verificações, incluindo existência e tamanho dos arquivos, número de
 páginas, conteúdo técnico, anotações de links nos PDFs, 12 slides, imagens
 incorporadas, cinco hyperlinks e referências no README.
 
 A regressão preservou os resultados das Etapas 1–6: 38 verificações integradas,
-32 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
+35 verificações do dashboard, 20 verificações MQTT, 20 testes estruturais, 23
 verificações do FIFO, oito cenários de alerta e validação documental da Etapa 1.
 
 ## Correção durante a revisão
@@ -64,7 +64,7 @@ zerados.
 
 ```text
 2bd248d778eb8519c00f1b113e7fe29cba5f380d033e270f3d4708741f51ae4e  CardioIA_Parte_1_Edge_Computing.pdf
-5fd1cdaacaac4139f74921ce3abb57c19312c2298f6befc3232c1abdb97f1f7d  CardioIA_Parte_2_MQTT_Dashboard.pdf
+26ec56f00c1bcaccd0dcd09eee3274312153dede29dad8d500684465ea70ea81  CardioIA_Parte_2_MQTT_Dashboard.pdf
 9b93c0ef6f7319e48661964d6474ce27192f01bda2503bb72371b058ca439eb2  CardioIA_Fase3_Apresentacao_Equipe_v2.pptx
 ```
 

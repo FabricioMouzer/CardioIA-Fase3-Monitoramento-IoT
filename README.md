@@ -71,9 +71,12 @@ offline, online, falha do DHT22 e recuperação.
 
 O dashboard é público, mas os dados em tempo real aparecem somente enquanto a
 simulação do Wokwi está em execução. Ao abrir o painel com o simulador parado,
-`offline_unexpected` indica o Last Will MQTT esperado — não uma falha do site.
-Com telemetria válida, o cartão **Dispositivo** reafirma o estado online e mostra
-a fila e os descartes atuais.
+o cartão **Dispositivo** mostra `offline — inicie o Wokwi`, que representa o
+Last Will MQTT esperado e não uma falha do site. Com telemetria válida, o cartão
+reafirma `online (telemetria ativa)` e mostra a fila e os descartes atuais.
+
+Para evitar colisão no broker público durante a demonstração, somente uma pessoa
+deve manter a simulação aberta por vez.
 
 ### Dashboard local
 

@@ -138,11 +138,16 @@
 
 ## D-020 — Avisos de dependências
 
-- **Decisão:** registrar os avisos transitivos do `npm audit` e não executar
-  `npm audit fix --force` antes da entrega.
-- **Motivo:** a correção forçada pode introduzir mudanças incompatíveis; o
-  protótipo usa apenas dados sintéticos, editor desabilitado e versões fixadas.
-- **Estado:** risco não crítico documentado; reavaliar antes de uso produtivo.
+- **Decisão:** atualizar `body-parser` para 1.20.9 e `multer` para 2.5.0 por
+  `overrides`; não executar `npm audit fix --force`.
+- **Motivo:** os `overrides` removem cinco alertas altos sem alterar as versões
+  do Node-RED e do dashboard. A correção forçada propõe um downgrade
+  incompatível do Node-RED para 0.19.6.
+- **Risco residual:** um alerta alto de `undici` e um moderado de `ip-address`
+  permanecem dentro do pacote `npm` embarcado no registro administrativo. O
+  ambiente público usa `httpAdminRoot=false` e bloqueia instalação e upload
+  dinâmicos pela paleta.
+- **Estado:** mitigado e validado; monitorar atualização compatível do Node-RED.
 
 ## D-021 — Repetibilidade da Etapa 6
 

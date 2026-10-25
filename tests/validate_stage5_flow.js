@@ -9,6 +9,7 @@ const vm = require('node:vm')
 const root = path.resolve(__dirname, '..')
 const flows = JSON.parse(fs.readFileSync(path.join(root, 'node-red/flows.json'), 'utf8'))
 const pkg = JSON.parse(fs.readFileSync(path.join(root, 'node-red/package.json'), 'utf8'))
+const settings = fs.readFileSync(path.join(root, 'node-red/settings.js'), 'utf8')
 let checks = 0
 
 function ok (condition, message) {
@@ -22,6 +23,11 @@ function nodes (type) {
 
 ok(pkg.dependencies['node-red'] === '5.0.9', 'Node-RED deve estar fixado')
 ok(pkg.dependencies['@flowfuse/node-red-dashboard'] === '1.34.0', 'Dashboard deve estar fixado')
+ok(pkg.overrides?.['body-parser'] === '1.20.9' && pkg.overrides?.multer === '2.5.0',
+   'Correções transitivas de segurança ausentes')
+ok(settings.includes('httpAdminRoot: process.env.NODE_RED_DISABLE_ADMIN === "true" ? false : "/"') &&
+   settings.includes('allowInstall: false') && settings.includes('allowUpload: false'),
+   'Proteções do runtime público ausentes')
 ok(nodes('ui-chart').length === 1, 'Deve existir um gráfico BPM')
 ok(nodes('ui-gauge').length >= 2, 'Devem existir gauges de temperatura e umidade')
 ok(nodes('ui-text').some((node) => node.name === 'Indicador de alerta'), 'Indicador visual ausente')
@@ -72,6 +78,11 @@ result = processCase('Teste JSON INVÁLIDO')
 ok(result.slice(0, 7).every((value) => value === null) &&
    /Campos ausentes|Contrato incompatível/.test(result[7].payload),
    'Contrato inválido não foi isolado')
+const invalidEnum = { ...injects['Teste NORMAL'], alert: 'diagnostico_real', source: 'externo' }
+result = execute({ payload: invalidEnum })
+ok(result.slice(0, 7).every((value) => value === null) &&
+   result[7].payload === 'Enumeração inválida',
+   'Enumeração inválida não foi rejeitada')
 
 const serialized = JSON.stringify(flows).toLowerCase()
 for (const forbidden of ['mqtt_password', 'api_key', 'bearer ', '-----begin']) {

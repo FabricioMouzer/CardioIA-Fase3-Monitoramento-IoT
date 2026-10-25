@@ -1,0 +1,36 @@
+CARDIOIA FASE 3 — ETAPA 7
+AUDITORIA PRÉ-APRESENTAÇÃO
+Data: 25/10/2026
+
+Resultado da regressão
+- Etapa 1 documental: aprovada.
+- Testes estruturais Python: 20 aprovados.
+- Alertas C++: 8 cenários aprovados.
+- FIFO C++: 23 verificações aprovadas.
+- Runtime offline: 10 verificações aprovadas.
+- Payload MQTT: 13 campos aprovados.
+- Evidência MQTT: 20 verificações aprovadas.
+- Dashboard: 35 verificações aprovadas.
+- Integração da Etapa 6: 38 verificações aprovadas.
+- Artefatos da Etapa 7: 21 verificações aprovadas.
+
+Acessos públicos
+- GitHub: HTTP 200.
+- Wokwi: HTTP 200.
+- Dashboard: HTTP 200.
+- PDF Parte 1: HTTP 200.
+- PDF Parte 2: HTTP 200.
+- PowerPoint v2: HTTP 200.
+
+Segurança
+- Nenhum segredo detectado no código versionado.
+- body-parser 1.20.9 e multer 2.5.0 aplicados por overrides.
+- Instalação e upload pela paleta bloqueados.
+- Editor e API administrativos desabilitados no Render.
+- Risco residual transitivo documentado em D-020.
+
+Pendências de liberação
+- Prazo exato do Portal FIAP não comprovado.
+- Nova apresentação pós-auditoria ainda será produzida.
+- Quatro aprovações da equipe ainda não registradas.
+- Etapa 8 permanece bloqueada.

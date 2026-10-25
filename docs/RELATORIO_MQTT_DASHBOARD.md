@@ -95,7 +95,7 @@ FIFO completa. A execução B comprovou alerta baixo, falha e recuperação do
 DHT22, além das três fronteiras.
 
 O validador da Etapa 6 executou 38 verificações sobre logs e capturas. A
-regressão também aprovou 29 verificações da Etapa 5, 20 verificações de evidência
+regressão também aprovou 35 verificações da Etapa 5, 20 verificações de evidência
 MQTT, 20 testes estruturais, 23 verificações do FIFO e oito cenários da lógica
 de alerta. O Wokwi e o dashboard responderam HTTP 200. O editor administrativo
 do Render respondeu HTTP 404, conforme a configuração de segurança.
@@ -105,6 +105,13 @@ do Render respondeu HTTP 404, conforme a configuração de segurança.
 O HiveMQ público e a porta 1883 não oferecem autenticação nem TLS. Essa escolha
 serve somente ao protótipo acadêmico com dados sintéticos. Nenhum nome de
 paciente, e-mail, senha, token ou dado clínico real integra o payload.
+
+Uma auditoria de dependências atualizou `body-parser` para 1.20.9 e `multer`
+para 2.5.0 por meio de `overrides`. Permanecem alertas transitivos dentro do
+pacote `npm` embarcado no registro administrativo do Node-RED. O ambiente do
+Render desabilita todos os endpoints administrativos com `httpAdminRoot=false`
+e bloqueia instalação e upload dinâmicos de módulos. O grupo deve revisar esses
+alertas quando o Node-RED publicar uma atualização compatível.
 
 Em produção, o sistema precisaria de TLS, credenciais individuais, autorização
 por tópico, rotação de segredos, auditoria, criptografia em repouso, alta
@@ -122,6 +129,10 @@ O repositório público contém código C++, circuito, bibliotecas, flow Node-RE
 dependências fixadas, contrato JSON, exemplos, logs, capturas e testes. O projeto
 do Wokwi abre sem login. O dashboard abre em navegador comum e a raiz
 administrativa não fica disponível no ambiente público.
+
+Como o broker é público e o protótipo usa um namespace compartilhado, a
+demonstração deve manter somente uma simulação do Wokwi ativa por vez. Isso
+evita colisão do identificador MQTT e sobreposição de sequências.
 
 Para execução local do dashboard, basta entrar em `node-red`, executar `npm ci`
 e depois `npm start`. O Wokwi compila o firmware usando `DHT sensor library for
