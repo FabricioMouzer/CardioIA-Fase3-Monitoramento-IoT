@@ -37,3 +37,7 @@ f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c  E2-03-alerta-n
 - T2-12 parcial: capturas do Serial validadas; faltam circuito e LED completos.
 - T2-10 pendente: falta publicar e testar o link Wokwi sem sessão.
 - Etapa 2 permanece aberta; Etapa 3 permanece bloqueada.
+
+[ATUALIZAÇÃO — 25/10/2026]
+Checkpoint histórico superado por E2-09: link público e capturas completas foram aprovados.
+A conclusão formal está registrada em docs/ETAPA_2_CONCLUSAO.md.

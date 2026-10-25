@@ -2,6 +2,8 @@
 
 Execução inicial: 23/10/2026  
 Complementação das evidências: 24/10/2026  
+Conclusão e teste público: 25/10/2026  
+Projeto público: <https://wokwi.com/projects/478845707855731713>  
 Commit inicial executado: `b5b08142d0f3eb94ce184a0b85992f0e8913e580`  
 Commit com injeção reproduzível de falha: `66140cd9a89f4447246c2983e565f615e196dcb8`
 
@@ -20,9 +22,9 @@ O firmware e o circuito da Etapa 2 foram carregados no Wokwi a partir dos commit
 | T2-07 | Comandos `F` e `R` na mesma execução | `sensor_error` seguido de `normal`, sem novo `BOOT` | Aprovado |
 | T2-08 | Limites exatos no teste C++ | 8/8 cenários aprovados | Aprovado |
 | T2-09 | Duas amostras sem reinício | `522 ms` e `5540 ms`; diferença de `5018 ms` | Aprovado |
-| T2-10 | Link público aberto sem sessão | Projeto ainda não foi salvo/publicado | Pendente |
+| T2-10 | Link público aberto sem sessão | Código, circuito e simulação acessíveis com `SIGN IN / SIGN UP` visível | Aprovado |
 | T2-11 | Transições contínuas | `high_bpm → normal` e `sensor_error → normal`, sem segundo `BOOT` | Aprovado |
-| T2-12 | Capturas preservadas | Serial dos dois ensaios salvo; circuito/LED ainda não capturados integralmente | Parcial |
+| T2-12 | Capturas preservadas | Circuito, LED e Serial registrados juntos nos estados normal, alerta e recuperação | Aprovado |
 
 ## Logs contínuos, sem reinício
 
@@ -68,8 +70,25 @@ O firmware verifica `millis() - lastSampleAt >= 5000`, portanto a amostra não d
 |---|---|---|
 | `E2-03-alerta-normal-sem-reinicio.jpg` | Trecho do Serial com `high_bpm` e retorno a `normal` | `f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c` |
 | `E2-04-dht-falha-recuperacao-sem-reinicio.jpg` | Trecho do Serial com falha e recuperação do DHT22 | `77575d137daf0d43ef742b69c7efacb09a4a5c3ea01d6f2575759005c9fe0e40` |
+| `E2-06-circuito-led-normal-link-publico.jpg` | Link público, circuito completo, LED apagado e log normal | `25827d64c1fdad184c07b0563050e779d21f9f5f436fedc31ebf06404d17d8e2` |
+| `E2-07-circuito-led-alerta-link-publico.jpg` | Mesmo circuito, LED aceso e log `high_bpm` | `5c79829a9781389349e1d9ce48111c32bd66a19e1e172d4d7f7a0028bccda102` |
+| `E2-08-circuito-led-recuperado-link-publico.jpg` | Mesmo circuito, LED apagado novamente e log normal | `bbebe06f8e7c18a5c9c67edd752b4b3cc49e4e06cd55949d112caf8c53f22a76` |
 
-As capturas acima comprovam o Serial. Para concluir T2-12 ainda devem ser adicionadas vistas completas do circuito e do LED nos estados de alerta e normal.
+As três capturas finais mostram o título do projeto público, o botão `SIGN IN / SIGN UP`, o circuito, o LED e o Monitor Serial. A correspondência é direta: `seq=1` normal/LED apagado, `seq=2` `high_bpm`/LED aceso e `seq=3` normal/LED apagado novamente, sem segundo `BOOT`.
+
+## Validação do link público sem sessão
+
+O endereço <https://wokwi.com/projects/478845707855731713> foi aberto em uma nova aba sem autenticação. A página exibiu `SIGN IN / SIGN UP`, permitiu ler todos os arquivos e iniciou a simulação. Não houve solicitação de novas permissões do GitHub.
+
+Antes da execução definitiva, `sketch.ino`, `alert_logic.h` e `diagram.json` foram alinhados com os arquivos documentados no repositório, salvos e recarregados pelo endereço público.
+
+```text
+SAMPLE seq=1 uptime_ms=523   bpm=110 alert_code=0 alert=normal
+SAMPLE seq=2 uptime_ms=5541  bpm=180 alert_code=2 alert=high_bpm
+SAMPLE seq=3 uptime_ms=10549 bpm=110 alert_code=0 alert=normal
+```
+
+Além do intervalo de 5.018 ms já justificado, a execução final mediu 5.008 ms entre `seq=2` e `seq=3`, desvio de apenas +8 ms (+0,16%), também dentro da faixa aceita.
 
 ## Integridade dos arquivos executados
 
@@ -82,11 +101,11 @@ As capturas acima comprovam o Serial. Para concluir T2-12 ainda devem ser adicio
 
 ## Portão de conclusão
 
-A Etapa 2 permanece aberta. Para encerrá-la, não basta publicar o link. É obrigatório:
+- [x] Projeto salvo e publicado no Wokwi.
+- [x] Link aberto e executado sem sessão (T2-10).
+- [x] Logs contínuos preservados (T2-11).
+- [x] Circuito, LED e Serial capturados e versionados (T2-12).
+- [x] Correspondência visual e textual conferida.
+- [x] Tolerância de tempo justificada.
 
-1. salvar e publicar o projeto no Wokwi;
-2. abrir o link sem sessão e registrar o resultado (T2-10);
-3. manter o log contínuo versionado (T2-11, já aprovado);
-4. completar e versionar as capturas do circuito, LED e Serial (T2-12, parcial).
-
-Somente depois dos quatro itens a mensagem formal de conclusão poderá ser emitida e a Etapa 3 será liberada.
+Todos os critérios foram aprovados. A conclusão formal está em `docs/ETAPA_2_CONCLUSAO.md`. A Etapa 3 não foi iniciada.

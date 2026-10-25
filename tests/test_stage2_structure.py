@@ -73,10 +73,26 @@ class Stage2StructureTests(unittest.TestCase):
         expected_hashes = {
             alert_capture: "f5acb69ba69f060175a091f3e70d969359081ed6a0e85a75db1b73095e1a2e2c",
             dht_capture: "77575d137daf0d43ef742b69c7efacb09a4a5c3ea01d6f2575759005c9fe0e40",
+            ROOT / "evidencias/etapa-2/E2-06-circuito-led-normal-link-publico.jpg": "25827d64c1fdad184c07b0563050e779d21f9f5f436fedc31ebf06404d17d8e2",
+            ROOT / "evidencias/etapa-2/E2-07-circuito-led-alerta-link-publico.jpg": "5c79829a9781389349e1d9ce48111c32bd66a19e1e172d4d7f7a0028bccda102",
+            ROOT / "evidencias/etapa-2/E2-08-circuito-led-recuperado-link-publico.jpg": "bbebe06f8e7c18a5c9c67edd752b4b3cc49e4e06cd55949d112caf8c53f22a76",
         }
         for path, expected in expected_hashes.items():
             self.assertTrue(path.is_file())
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected)
+
+    def test_stage2_final_gate_is_closed(self):
+        plan = (ROOT / "docs/ETAPA_2_PLANO_TESTES.md").read_text(encoding="utf-8")
+        conclusion = (ROOT / "docs/ETAPA_2_CONCLUSAO.md").read_text(encoding="utf-8")
+        final_log = (
+            ROOT / "evidencias/etapa-2/E2-09-validacao-final-link-publico.txt"
+        ).read_text(encoding="utf-8")
+
+        self.assertNotIn("- [ ] T2-", plan)
+        self.assertIn("T2-01 a T2-12", conclusion)
+        self.assertIn("https://wokwi.com/projects/478845707855731713", conclusion)
+        self.assertIn("SAMPLE seq=3 uptime_ms=10549", final_log)
+        self.assertIn("A Etapa 3 não foi iniciada", conclusion)
 
 
 if __name__ == "__main__":

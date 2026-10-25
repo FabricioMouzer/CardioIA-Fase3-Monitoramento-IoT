@@ -50,3 +50,7 @@ O tempo avaliado é o uptime_ms do ESP32 simulado, não o tempo de parede do nav
 - T2-10: salvar/publicar o projeto no Wokwi e testar o link sem sessão.
 - A publicação do link, isoladamente, não finaliza a etapa; este log e as capturas também
   precisam permanecer acessíveis no repositório.
+
+[ATUALIZAÇÃO — 25/10/2026]
+O link público, o teste sem sessão e as capturas completas foram concluídos em E2-09.
+Este bloco registra o estado histórico anterior à conclusão e não representa pendência atual.

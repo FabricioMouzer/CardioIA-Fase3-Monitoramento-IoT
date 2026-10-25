@@ -1,0 +1,41 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-10 — Portão automatizado final
+Data: 25/10/2026 (America/Sao_Paulo)
+
+[PRIMEIRA EXECUÇÃO]
+O novo teste de conclusão identificou uma divergência textual: o documento dizia
+"Etapa 3, porém não iniciada", mas não continha a declaração literal verificada pelo teste.
+Também foi identificado que o relatório ainda informava 6/6 testes, embora a suíte tivesse 7.
+Resultado: 1 falha em 7 testes. A Etapa 2 não foi encerrada nesse ponto.
+
+[CORREÇÃO]
+- Registrada a frase explícita: "A Etapa 3 não foi iniciada."
+- Total de testes corrigido de 6/6 para 7/7.
+
+[SEGUNDA EXECUÇÃO]
+python3 -m unittest tests/test_stage2_structure.py -v
+
+test_circuit_has_two_sensors_and_led ... ok
+test_continuous_evidence_is_preserved ... ok
+test_firmware_matches_stage2_contract ... ok
+test_library_is_explicit ... ok
+test_required_connections ... ok
+test_required_files_exist ... ok
+test_stage2_final_gate_is_closed ... ok
+
+Ran 7 tests
+OK
+
+python3 tests/run_stage2_alert_logic.py
+Lógica C++: 8 cenários de alerta aprovados.
+
+python3 -m json.tool wokwi/diagram.json
+JSON válido; código de saída 0.
+
+[AUDITORIA DOCUMENTAL]
+- Nenhum T2-01 a T2-12 desmarcado.
+- Nenhum estado Pendente, Parcial ou "Etapa 2 em execução" nos documentos vigentes.
+- Etapa 3 declarada como não iniciada.
+
+[RESULTADO]
+Portão final aprovado. Etapa 2 apta à confirmação formal.

@@ -1,0 +1,51 @@
+CardioIA — Fase 3 — Etapa 2
+Evidência E2-09 — Link público, circuito, LED e correspondência com logs
+Data: 25/10/2026 (America/Sao_Paulo)
+
+[LINK PÚBLICO]
+https://wokwi.com/projects/478845707855731713
+
+[TESTE SEM SESSÃO]
+- Link aberto em uma nova aba.
+- A página exibiu "SIGN IN / SIGN UP", comprovando ausência de sessão autenticada.
+- Código, alert_logic.h, diagram.json e libraries.txt ficaram visíveis.
+- A simulação compilou e iniciou pelo link público.
+- Nenhuma permissão nova do GitHub foi solicitada ou aceita.
+
+[CORRESPONDÊNCIA COM O GITHUB]
+- sketch.ino, alert_logic.h e diagram.json foram substituídos pela versão exata documentada no repositório.
+- O projeto foi salvo novamente e recarregado pelo link público antes da execução final.
+- O editor público mostrou o código e o circuito esperados.
+
+[SEQUÊNCIA FINAL SEM REINÍCIO]
+BOOT CardioIA Fase 3 Etapa 2 — sensores sintéticos
+TEST commands: F=falha DHT22, R=recuperacao DHT22
+SAMPLE seq=1 uptime_ms=523 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+SAMPLE seq=2 uptime_ms=5541 temp=36.5C humidity=55.0% bpm=180 sensor_valid=true alert_code=2 alert=high_bpm
+SAMPLE seq=3 uptime_ms=10549 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+
+[CORRESPONDÊNCIA VISUAL]
+- seq=1: BPM 110, alert_code=0, alert=normal, LED sem brilho — E2-06.
+- seq=2: BPM 180, alert_code=2, alert=high_bpm, LED vermelho aceso — E2-07.
+- seq=3: BPM 110, alert_code=0, alert=normal, LED apagado novamente — E2-08.
+- A sequência cresceu de 1 para 3 e houve somente um BOOT.
+
+[CADÊNCIA]
+- seq=1 -> seq=2: 5541 - 523 = 5018 ms.
+- Desvio frente ao alvo de 5000 ms: +18 ms (+0,36%).
+- Critério aprovado: 5000 a 5050 ms, atraso unilateral máximo de 1%.
+- seq=2 -> seq=3: 10549 - 5541 = 5008 ms (+8 ms; +0,16%).
+- Justificativa: a condição >= 5000 impede disparo antecipado; delay(10), leitura do DHT22,
+  processamento e escrita serial introduzem pequeno atraso de execução cooperativa.
+
+[HASHES DAS CAPTURAS]
+25827d64c1fdad184c07b0563050e779d21f9f5f436fedc31ebf06404d17d8e2  E2-06-circuito-led-normal-link-publico.jpg
+5c79829a9781389349e1d9ce48111c32bd66a19e1e172d4d7f7a0028bccda102  E2-07-circuito-led-alerta-link-publico.jpg
+bbebe06f8e7c18a5c9c67edd752b4b3cc49e4e06cd55949d112caf8c53f22a76  E2-08-circuito-led-recuperado-link-publico.jpg
+
+[RESULTADO]
+- T2-10 aprovado.
+- T2-11 aprovado.
+- T2-12 aprovado.
+- Todos os critérios da Etapa 2 estão atendidos.
+- A Etapa 3 não foi iniciada.
