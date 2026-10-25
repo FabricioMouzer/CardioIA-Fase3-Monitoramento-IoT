@@ -1,0 +1,47 @@
+CardioIA — Fase 3 — Etapa 3
+Evidência E3-07 — Portão final
+Data: 25/10/2026 (America/Sao_Paulo)
+
+[PROJETO PÚBLICO]
+https://wokwi.com/projects/478851580032675841
+
+[EXECUÇÃO WOKWI]
+- Compilação concluída sem erro.
+- Execução contínua com somente um BOOT.
+- Leitura seq=1 enviada online como source=live.
+- Leituras seq=2, seq=3 e seq=4 coletadas offline.
+- Reconexão iniciou com pending=3.
+- Sincronização enviou seq=2, seq=3 e seq=4, nessa ordem.
+- Resultado: SYNC_DONE sent=3 pending=0 dropped_samples=0.
+- Captura final: E3-05.
+- Log correlacionado: E3-06.
+
+[TESTE DE ACESSO SEM SESSÃO]
+curl -L https://wokwi.com/projects/478851580032675841
+- Código HTTP observado: 200.
+- O HTML retornado expôs o nome público do projeto.
+- sketch.ino, diagram.json e edge_buffer.h estavam presentes.
+- A requisição não utilizou cookies nem credenciais da sessão do navegador.
+
+[PRIMEIRA EXECUÇÃO DO PORTÃO]
+- 13 testes passaram e um teste falhou.
+- Causa: o teste procurava a frase singular "Etapa 3 confirmada e finalizada",
+  enquanto o README registra corretamente "Etapas 0, 1, 2 e 3 confirmadas".
+- Nenhuma funcionalidade do firmware falhou.
+
+[CORREÇÃO]
+- O teste passou a conferir a linha autoritativa da tabela da Etapa 3.
+
+[SEGUNDA EXECUÇÃO DO PORTÃO]
+- 14/14 testes estruturais e regressivos aprovados.
+- 18/18 verificações da lógica FIFO C++ aprovadas.
+- 10/10 verificações do log real aprovadas; sem duplicação ou perda.
+- 8/8 cenários da lógica de alertas da Etapa 2 aprovados.
+- Etapa 1 validada: documentos, três tópicos e contrato JSON.
+- diagram.json válido.
+- Nenhum T3-01 a T3-13 desmarcado.
+- Nenhum item de MQTT ou Node-RED iniciado.
+
+[RESULTADO]
+Portão final aprovado. Etapa 3 confirmada e finalizada.
+Etapa 4 tecnicamente liberada, mas não iniciada.

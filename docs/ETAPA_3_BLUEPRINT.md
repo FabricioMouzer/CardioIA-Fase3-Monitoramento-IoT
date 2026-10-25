@@ -2,9 +2,9 @@
 
 ## Estado
 
-**Em execução.** Este documento define o comportamento a ser implementado e
-testado. A etapa só poderá ser encerrada após execução no Wokwi, preservação dos
-logs e das capturas e aprovação de todos os testes do portão.
+**Confirmada e finalizada em 25/10/2026.** Este documento registra o
+comportamento implementado e validado. A execução no Wokwi, os logs, as
+capturas e os testes do portão estão vinculados na conclusão da etapa.
 
 ## Fluxo funcional
 

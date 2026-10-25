@@ -2,10 +2,12 @@
 
 Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 do projeto CardioIA.
 
-> Estado atual: **Etapas 0, 1 e 2 confirmadas e finalizadas. Etapa 3 em execução.**
+> Estado atual: **Etapas 0, 1, 2 e 3 confirmadas e finalizadas. Etapa 4 liberada, mas não iniciada.**
 
 - [Abrir o projeto público no Wokwi](https://wokwi.com/projects/478845707855731713)
 - [Consultar a conclusão e o índice da Etapa 2](docs/ETAPA_2_CONCLUSAO.md)
+- [Abrir a Etapa 3 pública no Wokwi](https://wokwi.com/projects/478851580032675841)
+- [Consultar a conclusão da Etapa 3](docs/ETAPA_3_CONCLUSAO.md)
 
 ## Regra principal do projeto
 
@@ -37,8 +39,8 @@ Os e-mails dos integrantes não serão publicados no repositório.
 | 0 | Governança, repositório e critérios | Confirmada e finalizada em 23/10/2026 |
 | 1 | Requisitos e arquitetura | Confirmada e finalizada em 23/10/2026 |
 | 2 | Sensores e circuito no Wokwi | Confirmada e finalizada em 25/10/2026; T2-01 a T2-12 aprovados |
-| 3 | Resiliência offline no Edge | Em execução desde 25/10/2026 |
-| 4 | MQTT e broker | Bloqueada |
+| 3 | Resiliência offline no Edge | Confirmada e finalizada em 25/10/2026; T3-01 a T3-13 aprovados |
+| 4 | MQTT e broker | Liberada pelo portão técnico, não iniciada |
 | 5 | Dashboard e alertas no Node-RED | Bloqueada |
 | 6 | Teste integrado e evidências | Bloqueada |
 | 7 | Relatórios, vídeo e revisão do grupo | Bloqueada |

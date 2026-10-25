@@ -1,0 +1,66 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1156
+load:0x40078000,len:11456
+ho 0 tail 12 room 4
+load:0x40080400,len:2972
+entry 0x400805dc
+BOOT CardioIA Fase 3 Etapa 3 — Edge offline sintético
+TEST commands: F=falha DHT22, R=recuperacao DHT22, O=offline, N=online
+EDGE_BUFFER capacity=2160 interval_ms=5000 retention_hours=3
+SAMPLE seq=1 uptime_ms=535 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=1 source=live uptime_ms=535 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=2 uptime_ms=5555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=2 source=live uptime_ms=5555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=3 uptime_ms=10555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=3 source=live uptime_ms=10555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=4 uptime_ms=15555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=4 source=live uptime_ms=15555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=5 uptime_ms=20555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=5 source=live uptime_ms=20555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=6 uptime_ms=25555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=6 source=live uptime_ms=25555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=7 uptime_ms=30555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=7 source=live uptime_ms=30555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=8 uptime_ms=35555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=8 source=live uptime_ms=35555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=9 uptime_ms=40555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=9 source=live uptime_ms=40555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=10 uptime_ms=45555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=10 source=live uptime_ms=45555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CONNECTIVITY state=offline source=serial pending=0
+SAMPLE seq=11 uptime_ms=50555 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=11 pending=1 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=12 uptime_ms=55564 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=12 pending=2 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=13 uptime_ms=60573 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=13 pending=3 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=14 uptime_ms=65582 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=14 pending=4 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=15 uptime_ms=70591 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=15 pending=5 capacity=2160 dropped_samples=0 overwritten=false
+SAMPLE seq=16 uptime_ms=75600 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+BUFFER_STORE seq=16 pending=6 capacity=2160 dropped_samples=0 overwritten=false
+CONNECTIVITY state=online source=serial pending=6
+SYNC_START pending=6 dropped_samples=0
+CLOUD_SEND seq=11 source=buffered uptime_ms=50555 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CLOUD_SEND seq=12 source=buffered uptime_ms=55564 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CLOUD_SEND seq=13 source=buffered uptime_ms=60573 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CLOUD_SEND seq=14 source=buffered uptime_ms=65582 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CLOUD_SEND seq=15 source=buffered uptime_ms=70591 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+CLOUD_SEND seq=16 source=buffered uptime_ms=75600 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SYNC_DONE sent=6 pending=0 dropped_samples=0
+SAMPLE seq=17 uptime_ms=80602 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=17 source=live uptime_ms=80602 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=18 uptime_ms=85602 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=18 source=live uptime_ms=85602 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=19 uptime_ms=90602 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=19 source=live uptime_ms=90602 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=20 uptime_ms=95602 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=20 source=live uptime_ms=95602 temp=36.5C humidity=55.0% bpm=110 alert_code=0
+SAMPLE seq=21 uptime_ms=100602 temp=36.5C humidity=55.0% bpm=110 sensor_valid=true alert_code=0 alert=normal
+CLOUD_SEND seq=21 source=live uptime_ms=100602 temp=36.5C humidity=55.0% bpm=110 alert_code=0

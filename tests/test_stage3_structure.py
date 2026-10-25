@@ -59,12 +59,16 @@ class Stage3StructureTests(unittest.TestCase):
         self.assertNotIn("WiFi.begin", sketch)
         self.assertNotIn("broker.hivemq.com", sketch)
 
-    def test_gate_remains_open(self):
+    def test_gate_is_closed(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         plan = (ROOT / "docs/ETAPA_3_PLANO_TESTES.md").read_text(encoding="utf-8")
-        self.assertIn("Etapa 3 em execução", readme)
-        self.assertIn("- [ ] **T3-07", plan)
-        self.assertIn("ABERTO — ETAPA EM EXECUÇÃO", plan)
+        conclusion = (ROOT / "docs/ETAPA_3_CONCLUSAO.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "| 3 | Resiliência offline no Edge | Confirmada e finalizada", readme
+        )
+        self.assertNotIn("- [ ] **T3-", plan)
+        self.assertIn("FECHADO — ETAPA CONFIRMADA", plan)
+        self.assertIn("✅ ETAPA 3 CONFIRMADA E FINALIZADA", conclusion)
 
 
 if __name__ == "__main__":

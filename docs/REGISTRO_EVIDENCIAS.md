@@ -26,7 +26,13 @@
 | E-212 | 2 | Correspondência entre link, circuito, LED e logs | `evidencias/etapa-2/E2-09-validacao-final-link-publico.txt` | 25/10/2026 | Codex | Aprovado |
 | E-213 | 2 | Encerramento formal da etapa | `docs/ETAPA_2_CONCLUSAO.md` | 25/10/2026 | Codex | Aprovado |
 | E-214 | 2 | Portão automatizado final e correção da inconsistência | `evidencias/etapa-2/E2-10-portao-final.txt` | 25/10/2026 | Codex | 7/7 testes + 8/8 cenários aprovados |
-| E-301 | 3 | Blueprint, buffer limitado e início formal | `docs/ETAPA_3_BLUEPRINT.md` e `evidencias/etapa-3/E3-01-inicio-e-validacao-estatica.txt` | 25/10/2026 | Codex | 14/14 testes + 18/18 verificações FIFO; execução Wokwi pendente |
+| E-301 | 3 | Blueprint, buffer limitado e início formal | `docs/ETAPA_3_BLUEPRINT.md` e `evidencias/etapa-3/E3-01-inicio-e-validacao-estatica.txt` | 25/10/2026 | Codex | Checkpoint inicial; execução concluída posteriormente em E-302 a E-307 |
+| E-302 | 3 | Coleta offline visível | `evidencias/etapa-3/E3-02-wokwi-offline-buffer.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-303 | 3 | Sincronização intermediária | `evidencias/etapa-3/E3-03-wokwi-sincronizacao-concluida.jpg` | 25/10/2026 | Codex | Preservado; substituído como evidência principal por E-305/E-306 |
+| E-304 | 3 | Log contínuo com seis amostras | `evidencias/etapa-3/E3-04-log-continuo-online-offline-sync.txt` | 25/10/2026 | Codex | Aprovado |
+| E-305 | 3 | Captura final correlacionada | `evidencias/etapa-3/E3-05-wokwi-ciclo-completo-pausado.jpg` | 25/10/2026 | Codex | Aprovado |
+| E-306 | 3 | Log final online → offline → sincronização | `evidencias/etapa-3/E3-06-log-final-ciclo-correlacionado.txt` | 25/10/2026 | Codex | 3 armazenadas, 3 sincronizadas, pendentes 0 |
+| E-307 | 3 | Portão automatizado e acesso público | `evidencias/etapa-3/E3-07-validacao-final.txt` | 25/10/2026 | Codex | Aprovado |
 
 ## Padrão de nomes
 
