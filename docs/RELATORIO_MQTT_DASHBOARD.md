@@ -106,6 +106,18 @@ MQTT, 20 testes estruturais, 23 verificações do FIFO e oito cenários da lógi
 de alerta. O Wokwi e o dashboard responderam HTTP 200. O editor administrativo
 do Render respondeu HTTP 404, conforme a configuração de segurança.
 
+### Capturas do broker MQTT e do dashboard Node-RED
+
+| Recebimento no Broker HiveMQ (Assinante Independente) | Dashboard em Estado `NORMAL` (Gráfico BPM + Gauges + Fila Zero) |
+|---|---|
+| ![Broker HiveMQ](../evidencias/etapa-4/E4-03-assinante-independente.jpg) | ![Dashboard Normal](../evidencias/etapa-6/E6-05-execucao-a-sincronizada.jpg) |
+| **Alerta Visual Automático — `BPM ALTO` (163 BPM)** | **Alerta Visual Automático — `BPM BAIXO` (42 BPM)** |
+| ![Alerta BPM Alto](../evidencias/etapa-6/E6-02-execucao-a-bpm-alto.jpg) | ![Alerta BPM Baixo](../evidencias/etapa-6/E6-06-execucao-b-bpm-baixo.jpg) |
+
+| Alerta Técnico Automático — `FALHA DO SENSOR` (`DHT22` inválido) |
+|---|
+| ![Alerta Falha Sensor](../evidencias/etapa-6/E6-07-execucao-b-falha-dht.jpg) |
+
 ## 7. Segurança e limitações
 
 O HiveMQ público e a porta 1883 não oferecem autenticação nem TLS. Essa escolha

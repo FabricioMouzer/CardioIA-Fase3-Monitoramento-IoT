@@ -108,6 +108,14 @@ estouro de forma determinística. Eles confirmaram a substituição da amostra m
 antiga e o incremento do contador de descartes. A execução principal terminou
 com fila zero e nenhum descarte.
 
+### Capturas da simulação no Wokwi (Edge Computing e Resiliência)
+
+| Circuito Wokwi em Estado Normal | Circuito Wokwi com LED de Alerta Ativado |
+|---|---|
+| ![Circuito Normal](../evidencias/etapa-2/E2-06-circuito-led-normal-link-publico.jpg) | ![Circuito Alerta](../evidencias/etapa-2/E2-07-circuito-led-alerta-link-publico.jpg) |
+| **Coleta Offline e Armazenamento no Buffer FIFO (`BUFFER_STORE`)** | **Sincronização Serial/MQTT Concluída Após Reconexão** |
+| ![Buffer Offline](../evidencias/etapa-3/E3-02-wokwi-offline-buffer.jpg) | ![Sincronização Concluída](../evidencias/etapa-6/E6-04-execucao-a-wokwi.jpg) |
+
 ## 6. Limitações, segurança e evolução
 
 O potenciômetro não mede batimentos cardíacos reais. Ele gera valores sintéticos

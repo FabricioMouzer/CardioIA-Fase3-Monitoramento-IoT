@@ -104,6 +104,28 @@ Dashboard local: `http://127.0.0.1:1880/dashboard/monitoramento`
 
 Essas regras servem ao protótipo educacional e não constituem orientação médica.
 
+## Evidências visuais (Parte 1 e Parte 2)
+
+### Parte 1 — Simulação Wokwi, Edge Computing e Resiliência Offline
+
+| Circuito Wokwi + Publicação MQTT Ao Vivo | Retenção Offline no Buffer FIFO (`2.160` amostras) |
+|---|---|
+| ![Wokwi MQTT Online](evidencias/etapa-6/E6-04-execucao-a-wokwi.jpg) | ![Wokwi Buffer Offline](evidencias/etapa-3/E3-02-wokwi-offline-buffer.jpg) |
+| **LED de Alerta Local Atuado no Wokwi** | **Sincronização Concluída Após Reconexão** |
+| ![Circuito em Alerta](evidencias/etapa-2/E2-07-circuito-led-alerta-link-publico.jpg) | ![Wokwi Sincronização](evidencias/etapa-3/E3-03-wokwi-sincronizacao-concluida.jpg) |
+
+### Parte 2 — Broker MQTT (HiveMQ) e Dashboard Node-RED com Alertas Automáticos
+
+| Recebimento Independente no Broker HiveMQ | Dashboard Público — Estado `NORMAL` (Pós-Sincronização) |
+|---|---|
+| ![Assinante HiveMQ](evidencias/etapa-4/E4-03-assinante-independente.jpg) | ![Dashboard Normal Sincronizado](evidencias/etapa-6/E6-05-execucao-a-sincronizada.jpg) |
+| **Alerta Automático — `BPM ALTO` (> 120 BPM)** | **Alerta Automático — `BPM BAIXO` (< 50 BPM)** |
+| ![Dashboard BPM Alto](evidencias/etapa-6/E6-02-execucao-a-bpm-alto.jpg) | ![Dashboard BPM Baixo](evidencias/etapa-6/E6-06-execucao-b-bpm-baixo.jpg) |
+
+| Alerta Técnico Automático — `FALHA DO SENSOR` (`DHT22` inválido / sentinelas `-999 °C` e `-1%`) |
+|---|
+| ![Dashboard Falha Sensor](evidencias/etapa-6/E6-07-execucao-b-falha-dht.jpg) |
+
 ## Regra principal do projeto
 
 Nenhuma etapa posterior pode ser iniciada antes que a etapa atual:
