@@ -76,10 +76,16 @@ botões servem apenas aos testes.
 
 ## 5. Dashboard e alertas
 
-O dashboard apresenta um gráfico temporal de BPM, gauge de temperatura, gauge
-de umidade, condição atual, sequência, origem, fila, descartes e estado do
-dispositivo. O indicador de condição muda para BPM baixo, BPM alto, temperatura
-alta ou falha do sensor conforme a máscara calculada no Edge.
+O dashboard apresenta um gráfico temporal de BPM (`ui-chart`), gauge de
+temperatura (`ui-gauge`), gauge de umidade (`ui-gauge`), condição atual
+(`ui-text`), sequência, origem, fila, descartes e estado do dispositivo. A
+escolha visual prioriza o gráfico de linha em série temporal para os batimentos
+cardíacos (variável hemodinâmica de oscilação rápida) e medidores tipo *gauge*
+com faixas cromáticas para temperatura (30 a 42 °C) e umidade (0 a 100%), cujas
+variações ocorrem de forma gradual. O indicador visual de condição muda
+automaticamente a cor (`#067647` verde em estado normal para `#b42318` vermelho
+em alerta) e o rótulo para `BPM BAIXO`, `BPM ALTO`, `TEMPERATURA ALTA` ou
+`FALHA DO SENSOR` conforme a máscara calculada no Edge.
 
 Os cenários observados incluíram 163 BPM com alerta alto, 42 BPM com alerta
 baixo, 39,5 °C com temperatura alta e DHT22 inválido com alerta técnico. O

@@ -7,18 +7,29 @@
 #include "edge_buffer.h"
 #include "mqtt_payload.h"
 
-// CardioIA Fase 3 — Etapa 4. Dados exclusivamente sintéticos.
+// ============================================================================
+// CardioIA Fase 3 — Firmware Principal ESP32 (Edge Computing + MQTT)
+// ============================================================================
+// Simula um dispositivo vestível de monitoramento cardiológico contínuo com:
+// 1. Coleta periódica (5.000 ms) de dois sensores distintos:
+//    - DHT22 no GPIO 15 (temperatura ambiente/corporal simulada e umidade)
+//    - Potenciômetro no ADC GPIO 34 (frequência cardíaca sintética: 40–180 BPM)
+// 2. Processamento local na borda (Edge) e acionamento de LED de alerta (GPIO 2)
+// 3. Simulação de conectividade Wi-Fi/MQTT via botão físico (GPIO 4) ou Serial
+// 4. Resiliência offline via buffer circular FIFO (2.160 amostras = 3 horas)
+// 5. Sincronização automática em lote e limpeza do buffer ao reconectar ao broker
+// Nota: Utiliza dados exclusivamente sintéticos para fins acadêmicos.
 namespace Config {
-constexpr uint8_t DHT_PIN = 15;
-constexpr uint8_t BPM_PIN = 34;
-constexpr uint8_t ALERT_LED_PIN = 2;
-constexpr uint8_t CONNECTIVITY_BUTTON_PIN = 4;
-constexpr uint32_t SAMPLE_INTERVAL_MS = 5000;
-constexpr uint32_t BUTTON_DEBOUNCE_MS = 50;
-constexpr uint32_t RECONNECT_INTERVAL_MS = 5000;
-constexpr size_t OFFLINE_BUFFER_CAPACITY = 2160;
-constexpr uint16_t BPM_MIN = 40;
-constexpr uint16_t BPM_MAX = 180;
+constexpr uint8_t DHT_PIN = 15;                  // Pino de dados do sensor DHT22
+constexpr uint8_t BPM_PIN = 34;                  // Pino analógico (ADC1) do potenciômetro de BPM
+constexpr uint8_t ALERT_LED_PIN = 2;             // LED vermelho indicador de alerta local
+constexpr uint8_t CONNECTIVITY_BUTTON_PIN = 4;   // Botão pushbutton (pull-up) para alternar online/offline
+constexpr uint32_t SAMPLE_INTERVAL_MS = 5000;    // Intervalo nominal de amostragem (5 segundos)
+constexpr uint32_t BUTTON_DEBOUNCE_MS = 50;      // Tempo de debounce físico do botão (50 ms)
+constexpr uint32_t RECONNECT_INTERVAL_MS = 5000; // Intervalo entre tentativas de reconexão Wi-Fi/MQTT
+constexpr size_t OFFLINE_BUFFER_CAPACITY = 2160; // Capacidade offline: 2.160 amostras (3h a cada 5s)
+constexpr uint16_t BPM_MIN = 40;                 // Limite inferior da escala sintética de BPM
+constexpr uint16_t BPM_MAX = 180;                // Limite superior da escala sintética de BPM
 
 constexpr char WIFI_SSID[] = "Wokwi-GUEST";
 constexpr char MQTT_HOST[] = "broker.hivemq.com";
@@ -32,6 +43,7 @@ constexpr char TOPIC_STATUS[] =
     "cardioia/fase3/rm566777/cardioia-esp32-01/status";
 }  // namespace Config
 
+// Estrutura compacta de amostra retida em RAM (20 bytes por registro).
 struct Sample {
   uint32_t sequence;
   uint32_t capturedAtMs;
@@ -42,6 +54,7 @@ struct Sample {
   uint8_t alertCode;
 };
 
+// Garante em tempo de compilação que o consumo do buffer seja previsível (43,2 KB).
 static_assert(sizeof(Sample) == 20,
               "Revise a capacidade: o tamanho de Sample foi alterado");
 
@@ -54,11 +67,12 @@ uint32_t nextSequence = 1;
 uint32_t lastSampleAt = 0;
 uint32_t lastReconnectAttemptAt = 0;
 uint32_t buttonChangedAt = 0;
-bool forceDhtFailure = false;
-bool networkEnabled = true;
+bool forceDhtFailure = false;   // Flag de teste para simular falha do sensor DHT22
+bool networkEnabled = true;     // Estado booleano de conectividade simulada (online/offline)
 bool lastButtonReading = HIGH;
 bool stableButtonState = HIGH;
 
+// Converte a máscara binária de alerta no rótulo principal por ordem de prioridade clínica/técnica.
 const char* primaryAlertLabel(uint8_t code) {
   if (code == ALERT_NONE) return "normal";
   if (code & ALERT_SENSOR_ERROR) return "sensor_error";
@@ -68,6 +82,7 @@ const char* primaryAlertLabel(uint8_t code) {
   return "unknown";
 }
 
+// Publica o estado operacional do dispositivo no tópico de status (com opção de retenção no broker).
 void publishStatus(const char* state, bool retained) {
   if (!mqttClient.connected()) return;
   char payload[256];
@@ -83,6 +98,7 @@ void publishStatus(const char* state, bool retained) {
                 static_cast<unsigned>(offlineBuffer.size()));
 }
 
+// Publica uma amostra (ao vivo ou sincronizada do buffer) nos tópicos MQTT e registra no Monitor Serial.
 bool publishSample(const Sample& sample, const char* source,
                    size_t pendingAfterPublish) {
   if (!mqttClient.connected()) return false;
@@ -115,6 +131,8 @@ bool publishSample(const Sample& sample, const char* source,
   return accepted;
 }
 
+// Drena e sincroniza na ordem original (FIFO) todas as amostras retidas durante o período offline.
+// Cada amostra só é removida do buffer local (discardFront) após confirmação de publicação.
 void synchronizeBufferedSamples() {
   if (!mqttClient.connected() || offlineBuffer.empty()) return;
   Serial.printf("SYNC_START pending=%u dropped_samples=%lu\n",
@@ -137,6 +155,7 @@ void synchronizeBufferedSamples() {
   publishStatus(offlineBuffer.empty() ? "online" : "online_syncing", true);
 }
 
+// Armazena uma amostra no buffer circular local quando offline ou se a publicação falhar.
 void enqueueSample(const Sample& sample, const char* reason) {
   const bool overwritten = offlineBuffer.push(sample);
   Serial.printf(
@@ -148,6 +167,8 @@ void enqueueSample(const Sample& sample, const char* reason) {
       overwritten ? "true" : "false");
 }
 
+// Gerencia de forma não-bloqueante a conexão Wi-Fi, reconexão ao broker MQTT (com Last Will)
+// e disparo da sincronização de pendências do buffer local.
 void serviceNetwork() {
   if (!networkEnabled) return;
   if (WiFi.status() != WL_CONNECTED) {
@@ -180,6 +201,7 @@ void serviceNetwork() {
   synchronizeBufferedSamples();
 }
 
+// Alterna o estado simulado de conectividade (online/offline) por botão ou comando Serial.
 void setNetworkEnabled(bool enabled, const char* source) {
   if (networkEnabled == enabled) return;
   networkEnabled = enabled;
@@ -193,6 +215,9 @@ void setNetworkEnabled(bool enabled, const char* source) {
   }
 }
 
+// Processa comandos determinísticos enviados pelo Monitor Serial durante ensaios de validação:
+// 'O'/'o' -> Desativa rede (modo offline) | 'N'/'n' -> Reativa rede (modo online e sincroniza)
+// 'F'/'f' -> Simula falha do sensor DHT22 | 'R'/'r' -> Recupera leitura normal do DHT22
 void processTestCommands() {
   while (Serial.available() > 0) {
     const char command = static_cast<char>(Serial.read());
@@ -210,6 +235,7 @@ void processTestCommands() {
   }
 }
 
+// Lê o botão físico de conectividade (GPIO 4) com filtro de debounce por software.
 void processConnectivityButton() {
   const bool reading = digitalRead(Config::CONNECTIVITY_BUTTON_PIN);
   if (reading != lastButtonReading) {
@@ -223,6 +249,8 @@ void processConnectivityButton() {
   }
 }
 
+// Realiza a leitura dos sensores (DHT22 + potenciômetro de BPM), aplica sentinelas em caso
+// de falha do sensor e executa a classificação local de alertas na borda (Edge).
 Sample collectSample() {
   const TempAndHumidity reading = dht.getTempAndHumidity();
   const bool sensorValid = !forceDhtFailure && !isnan(reading.temperature) &&
@@ -240,6 +268,8 @@ Sample collectSample() {
   return sample;
 }
 
+// Executa o ciclo completo de uma amostra: captura, atuação local no LED, log Serial e
+// roteamento inteligente (envio imediato via MQTT quando online ou retenção FIFO quando offline).
 void sampleAndRoute() {
   const Sample sample = collectSample();
   digitalWrite(Config::ALERT_LED_PIN,
@@ -261,6 +291,7 @@ void sampleAndRoute() {
   }
 }
 
+// Inicializa periféricos, ADC de 12 bits, sensor DHT22, cliente Wi-Fi/MQTT e primeira coleta.
 void setup() {
   Serial.begin(115200);
   pinMode(Config::ALERT_LED_PIN, OUTPUT);
@@ -281,6 +312,7 @@ void setup() {
   lastSampleAt = millis();
 }
 
+// Loop principal cooperativo: processa comandos, botão, pilha de rede e janela de amostragem.
 void loop() {
   processTestCommands();
   processConnectivityButton();

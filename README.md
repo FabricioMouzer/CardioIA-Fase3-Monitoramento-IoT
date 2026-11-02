@@ -4,7 +4,8 @@ Repositório exclusivo para o desenvolvimento, validação e entrega da Fase 3 d
 
 > Estado atual: **Etapas 0 a 6 confirmadas e finalizadas. Etapa 7 em execução desde 25/10/2026.**
 
-- [Abrir o projeto público no Wokwi](https://wokwi.com/projects/478845707855731713)
+- [Abrir o projeto público completo no Wokwi (Edge + Buffer + MQTT)](https://wokwi.com/projects/478851580032675841)
+- [Abrir o circuito base da Etapa 2 no Wokwi (somente sensores locais)](https://wokwi.com/projects/478845707855731713)
 - [Consultar a conclusão e o índice da Etapa 2](docs/ETAPA_2_CONCLUSAO.md)
 - [Abrir a Etapa 3 pública no Wokwi](https://wokwi.com/projects/478851580032675841)
 - [Consultar a conclusão da Etapa 3](docs/ETAPA_3_CONCLUSAO.md)

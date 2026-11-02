@@ -55,17 +55,28 @@ recuperação. Os testes comprovaram transições contínuas de normal para aler
 de alerta para normal sem reiniciar o dispositivo.
 
 Quando o DHT22 fica inválido, o payload usa `-999.0` para temperatura e `-1.0`
-para umidade, define `sensor_valid=false` e ativa o bit 8. Esses valores
-sentinela tornam a falha explícita e impedem que uma leitura ausente pareça uma
-medição clínica válida.
+para umidade, define `sensor_valid=false` e ativa o bit 3 (valor 8 na máscara
+`alert_code`). Esses valores sentinela tornam a falha explícita e impedem que
+uma leitura ausente pareça uma medição clínica válida.
+
+| Bit | Valor (`alert_code`) | Constante C++ | Condição Clínica / Técnica |
+|---:|---:|---|---|
+| — | `0` | `ALERT_NONE` | Estado normal (`50 <= BPM <= 120` e `temp <= 38,0 °C`) |
+| 0 | `1` | `ALERT_BPM_LOW` | Bradicardia sintética (`BPM < 50`) |
+| 1 | `2` | `ALERT_BPM_HIGH` | Taquicardia sintética (`BPM > 120`) |
+| 2 | `4` | `ALERT_TEMP_HIGH` | Hipertermia sintética (`temperatura > 38,0 °C`) |
+| 3 | `8` | `ALERT_SENSOR_ERROR` | Falha de leitura do sensor `DHT22` (`sensor_valid=false`) |
 
 ## 4. Resiliência offline
 
-O ESP32 utiliza um buffer circular FIFO em RAM com capacidade para 2.160
-amostras. Com uma leitura a cada cinco segundos, o limite representa três horas
-de operação sem conexão. Quando o buffer atinge a capacidade máxima, a amostra
-mais antiga é substituída e `dropped_samples` aumenta. Essa política preserva as
-leituras recentes e expõe qualquer perda.
+O ESP32 utiliza um buffer circular FIFO em RAM (`EdgeBuffer<Sample, 2160>`) com
+capacidade para 2.160 amostras. Como cada estrutura `Sample` possui exatamente
+20 bytes (`static_assert(sizeof(Sample) == 20)`), o buffer consome 43.200 bytes
+(43,2 KB) de SRAM de forma estática e previsível, sem alocação dinâmica no heap.
+Com uma leitura a cada cinco segundos, o limite representa três horas de
+operação contínua sem conexão. Quando o buffer atinge a capacidade máxima, a
+amostra mais antiga é substituída e `dropped_samples` aumenta. Essa política
+preserva as leituras recentes e expõe qualquer perda.
 
 Quando Wi-Fi ou MQTT não está disponível, a coleta continua e cada amostra entra
 na fila. Após a reconexão, o firmware publica as pendências na ordem original e
